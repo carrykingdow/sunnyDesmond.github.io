@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://sunnyDesmond.github.io/2017/08/10/TEXTAREA%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80/</loc>
-    <lastmod>2017-08-10T05:50:31.922Z</lastmod>
+    <loc>https://sunnyDesmond.github.io/2017/08/10/%E4%BD%BF%E7%94%A8FileReader%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E9%A2%84%E8%A7%88/</loc>
+    <lastmod>2017-08-10T05:53:40.234Z</lastmod>
     <data>
         <display>
-        <title>textarea高度自适应自动展开</title>
-        <pubTime>2017-08-10T05:41:27.000Z</pubTime>
+        <title>使用FileReader实现图片上传预览</title>
+        <pubTime>2017-08-10T05:21:34.000Z</pubTime>
         
         <tag>javascript</tag>
          
@@ -24,12 +24,12 @@
 
     
   <url>
-    <loc>https://sunnyDesmond.github.io/2017/08/10/%E4%BD%BF%E7%94%A8FileReader%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E9%A2%84%E8%A7%88/</loc>
-    <lastmod>2017-08-10T05:40:24.336Z</lastmod>
+    <loc>https://sunnyDesmond.github.io/2017/08/10/TEXTAREA%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80/</loc>
+    <lastmod>2017-08-10T05:53:30.800Z</lastmod>
     <data>
         <display>
-        <title>使用FileReader实现图片上传预览</title>
-        <pubTime>2017-08-10T05:21:34.000Z</pubTime>
+        <title>textarea高度自适应自动展开</title>
+        <pubTime>2017-08-10T05:41:27.000Z</pubTime>
         
         <tag>javascript</tag>
          
