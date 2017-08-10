@@ -104,12 +104,12 @@
 <meta property="og:site_name" content="sunny_desmond">
 <meta property="og:description" content="问题描述最近在项目中遇到一个非常奇怪的问题，拿出来和大家分享一下。由于文采不好，原因又和这篇文章上描述的差不多，我这边就不组织语言了。直接copy过来了。原文地址  问题1、 在移动设备上快速滚动屏幕然后点击使滚动停止，如何尽量避免在点击时误触a标签，跳转到其他页？ 问题2、这也是在移动端的前端开发中实际遇到的一个问题，详细说来就是在正常情况下，当我们的当前页面内容较多，高度上较高，出现滚动条的时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://sunnydesmond.github.io/img/list_demo.gif">
-<meta property="og:updated_time" content="2017-08-10T05:19:26.443Z">
+<meta property="og:image" content="http://oughko11e.bkt.clouddn.com/list_demo.gif">
+<meta property="og:updated_time" content="2017-08-10T06:30:56.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阻止页面滚动误触链接">
 <meta name="twitter:description" content="问题描述最近在项目中遇到一个非常奇怪的问题，拿出来和大家分享一下。由于文采不好，原因又和这篇文章上描述的差不多，我这边就不组织语言了。直接copy过来了。原文地址  问题1、 在移动设备上快速滚动屏幕然后点击使滚动停止，如何尽量避免在点击时误触a标签，跳转到其他页？ 问题2、这也是在移动端的前端开发中实际遇到的一个问题，详细说来就是在正常情况下，当我们的当前页面内容较多，高度上较高，出现滚动条的时">
-<meta name="twitter:image" content="https://sunnydesmond.github.io/img/list_demo.gif">
+<meta name="twitter:image" content="http://oughko11e.bkt.clouddn.com/list_demo.gif">
 
 
 
@@ -429,7 +429,7 @@
 <a id="more"></a>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>找了好多文章没有具体的解决方案，后来在一篇文章的启发下，解决了这个问题。贴下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line"><span class="comment">//处理 滑动超长list的时候 click页面强行停止页面 可能会触发页面上的a链接  </span></div><div class="line">  <span class="keyword">var</span> count = <span class="number">0</span>,  </div><div class="line">    timer = <span class="literal">null</span>;  </div><div class="line">  <span class="keyword">var</span> oldTop = newTop = $(<span class="built_in">window</span>).scrollTop();  </div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (timer) clearTimeout(timer);  </div><div class="line">    newTop = $(<span class="built_in">window</span>).scrollTop();  </div><div class="line">    <span class="built_in">console</span>.log(++count, oldTop, newTop);  </div><div class="line">    <span class="keyword">if</span> (newTop === oldTop) &#123;<span class="comment">//页面停止做的操作  </span></div><div class="line">      $(<span class="string">"a"</span>).removeAttr(<span class="string">"onclick"</span>);   </div><div class="line">      clearTimeout(timer);  </div><div class="line">    &#125; <span class="keyword">else</span> &#123;  </div><div class="line">      oldTop = newTop;  </div><div class="line">      timer = setTimeout(log, <span class="number">100</span>);  </div><div class="line">      $(<span class="string">"a"</span>).attr(<span class="string">"onclick"</span>, <span class="string">"return false"</span>); <span class="comment">//页面还在滚动中的操作  </span></div><div class="line">    &#125;  </div><div class="line">  &#125;  </div><div class="line">  $(<span class="built_in">window</span>).on(<span class="string">'touchmove'</span>, log);  </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>原理就是，判断滚动的页面是否还在滚动中，如果滚动那就将点击元素return false禁止点击。反之放开点击操作。我这边好多页面路由跳转用的是a 的href，所以我这么写。大家如果可以用的话，也可以改成其他的标签。<br>截图： 可以看到滚动中的页面 a标签上会有 禁止点击事件的操作。页面停止后，则删除这个禁止操作。</p>
-<h2 id="demo图"><a href="#demo图" class="headerlink" title="demo图"></a>demo图</h2><p><img src="/img/list_demo.gif" alt="阻止页面滚动误触demo图"></p>
+<h2 id="demo图"><a href="#demo图" class="headerlink" title="demo图"></a>demo图</h2><p><img src="http://oughko11e.bkt.clouddn.com/list_demo.gif" alt="阻止页面滚动误触demo图"></p>
 
       
     </div>
