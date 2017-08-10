@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端随笔杂记" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -96,17 +96,20 @@
 
 
 
-<meta name="description" content="流水笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://sunnyDesmond.github.io/categories/index.html">
+<meta name="description" content="需求web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。 demo图">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="textarea高度自适应自动展开">
+<meta property="og:url" content="https://sunnyDesmond.github.io/2017/08/10/TEXTAREA高度自适应自动展开/index.html">
 <meta property="og:site_name" content="sunny_desmond">
-<meta property="og:description" content="流水笔记">
+<meta property="og:description" content="需求web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。 demo图">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-09T06:01:07.759Z">
+<meta property="og:image" content="https://sunnydesmond.github.io/img/textarea.gif">
+<meta property="og:updated_time" content="2017-08-10T05:50:31.922Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="流水笔记">
+<meta name="twitter:title" content="textarea高度自适应自动展开">
+<meta name="twitter:description" content="需求web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。 demo图">
+<meta name="twitter:image" content="https://sunnydesmond.github.io/img/textarea.gif">
 
 
 
@@ -135,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://sunnyDesmond.github.io/categories/"/>
+  <link rel="canonical" href="https://sunnyDesmond.github.io/2017/08/10/TEXTAREA高度自适应自动展开/"/>
 
 
 
 
 
-  <title>分类 | sunny_desmond</title>
+  <title>textarea高度自适应自动展开 | sunny_desmond</title>
   
 
 
@@ -306,40 +309,212 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sunnyDesmond.github.io/2017/08/10/TEXTAREA高度自适应自动展开/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sunny_desmond">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sunny_desmond">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">分类</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 3 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css3/">css3</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开篇/">开篇</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h2 class="post-title" itemprop="name headline">textarea高度自适应自动展开</h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T13:41:27+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/10/TEXTAREA高度自适应自动展开/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/10/TEXTAREA高度自适应自动展开/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。</p>
+<h2 id="demo图"><a href="#demo图" class="headerlink" title="demo图"></a>demo图</h2><p><img src="/img/textarea.gif" alt="textarea高度自适应图"></p>
+<a id="more"></a>
+<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><blockquote>
+<p>html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"textarea"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">// textarea 自适应高度  </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeExpandingArea</span>(<span class="params">el</span>) </span>&#123;  </div><div class="line">    <span class="keyword">var</span> setStyle = <span class="function"><span class="keyword">function</span>(<span class="params">el</span>) </span>&#123;  </div><div class="line">        el.style.height = <span class="string">'auto'</span>;  </div><div class="line">        el.style.height = el.scrollHeight + <span class="string">'px'</span>;  </div><div class="line">        <span class="comment">// console.log(el.scrollHeight);  </span></div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">var</span> delayedResize = <span class="function"><span class="keyword">function</span>(<span class="params">el</span>) </span>&#123;  </div><div class="line">        <span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">                setStyle(el)  </div><div class="line">            &#125;,  </div><div class="line">            <span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">if</span> (el.addEventListener) &#123;  </div><div class="line">        el.addEventListener(<span class="string">'input'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            setStyle(el)  </div><div class="line">        &#125;, <span class="literal">false</span>);  </div><div class="line">        setStyle(el)  </div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (el.attachEvent) &#123;  </div><div class="line">        el.attachEvent(<span class="string">'onpropertychange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            setStyle(el)  </div><div class="line">        &#125;);  </div><div class="line">        setStyle(el)  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.VBArray &amp;&amp; <span class="built_in">window</span>.addEventListener) &#123; <span class="comment">//IE9  </span></div><div class="line">        el.attachEvent(<span class="string">"onkeydown"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            <span class="keyword">var</span> key = <span class="built_in">window</span>.event.keyCode;  </div><div class="line">            <span class="keyword">if</span> (key == <span class="number">8</span> || key == <span class="number">46</span>) delayedResize(el);  </div><div class="line">  </div><div class="line">        &#125;);  </div><div class="line">        el.attachEvent(<span class="string">"oncut"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            delayedResize(el);  </div><div class="line">        &#125;); <span class="comment">//处理粘贴  </span></div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">makeExpandingArea(textarea);</div></pre></td></tr></table></figure></p>
+</blockquote>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果您觉得这篇文章对你非常有用，可以请我喝一杯咖啡哦~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/img/wechatpay.jpg" alt="sunny_desmond WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/img/alipay.jpg" alt="sunny_desmond Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/10/使用FileReader实现图片上传预览/" rel="next" title="使用FileReader实现图片上传预览">
+                <i class="fa fa-chevron-left"></i> 使用FileReader实现图片上传预览
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -348,6 +523,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -368,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -477,6 +672,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#demo图"><span class="nav-number">2.</span> <span class="nav-text">demo图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现代码"><span class="nav-number">3.</span> <span class="nav-text">实现代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -595,10 +806,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -616,6 +827,18 @@
       <script id="dsq-count-scr" src="https://https-sunnydesmond-github-io.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sunnyDesmond.github.io/2017/08/10/TEXTAREA高度自适应自动展开/';
+          this.page.identifier = '2017/08/10/TEXTAREA高度自适应自动展开/';
+          this.page.title = 'textarea高度自适应自动展开';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-sunnydesmond-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
