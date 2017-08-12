@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vscode中使用tab emmet展开失效]]></title>
+    <url>%2F2017%2F08%2F12%2Fvscode%E4%B8%AD%E4%BD%BF%E7%94%A8tab-emmet%E5%B1%95%E5%BC%80%E5%A4%B1%E6%95%88%2F</url>
+    <content type="text"><![CDATA[问题用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如ul&gt;li+span不能生成&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;span&gt;&lt;/span&gt;&lt;/ul&gt;这种尴尬的问题。 解决其实问题也是很好解决，只要按ctrl+p呼出控制器，然后输入keybindings.json按回车。它自动会跳转到keybindings.json页面，然后新增12345&#123; "key": "tab", "command": "-acceptSelectedSuggestion", "when": "config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"&#125; 就可以解决如上问题。P.S(如果已经存在tab，那就直接把command和when替换即可)。 如果想要键入ul&gt;li+span，让它后面自带提示的话，也非常简单，只要把12345&#123; "key": "tab", "command": "editor.emmet.action.expandAbbreviation", "when": "config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus" &#125; 这个替换就行了。]]></content>
+      <categories>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基于JQ的平滑滚动到顶部插件]]></title>
     <url>%2F2017%2F08%2F10%2F%E5%9F%BA%E4%BA%8EJQ%E7%9A%84%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B6%E9%83%A8%E6%8F%92%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[需求页面过长的时候，滑到底部之后要想再翻到网站的顶部查看内容，如果单纯依靠手指划显然不太友好。这时点击回到顶部的功能就显得非常人性化。 实现利用如下这段js，我们可以轻松的做到这一点。 123456789101112131415161718192021222324252627282930313233$.fn.scrollTo = function(options) &#123; var defaults = &#123; toT: 0, //滚动目标位置 durTime: 500, //过渡动画时间 delay: 30, //定时器时间 callback: null //回调函数 &#125;; var opts = $.extend(defaults, options), timer = null, _this = this, curTop = _this.scrollTop(), //滚动条当前的位置 subTop = opts.toT - curTop, //滚动条目标位置和当前位置的差值 index = 0, dur = Math.round(opts.durTime / opts.delay), smoothScroll = function(t) &#123; index++; var per = Math.round(subTop / dur); if (index &gt;= dur) &#123; _this.scrollTop(t); window.clearInterval(timer); if (opts.callback &amp;&amp; typeof opts.callback == 'function') &#123; opts.callback(); &#125; return; &#125; else &#123; _this.scrollTop(curTop + index * per); &#125; &#125;; timer = window.setInterval(function() &#123; smoothScroll(opts.toT); &#125;, opts.delay); return _this; &#125;; 最后我们只要给某一个按钮的点击事件里加上这个$(&quot;body&quot;).scrollTo({ toT: 0 });就ok了。]]></content>
