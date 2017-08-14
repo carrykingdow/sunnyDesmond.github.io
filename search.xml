@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[利用css3实现箭头]]></title>
+    <url>%2F2017%2F08%2F14%2F%E5%88%A9%E7%94%A8css3%E5%AE%9E%E7%8E%B0%E7%AE%AD%E5%A4%B4%2F</url>
+    <content type="text"><![CDATA[需求在一些开发中，经常会用到一些箭头，如图所示：要实现图上的抢这个箭头，传统的做法就是切一张这样的图片，然后最为背景图就行了。但考虑到节约图片加载资源以及css3的强大特性，我们完全可以用CSS3来实现如图需求。 实现关于如何用css3实现三角形、箭头的方法有很多，百度一下你就知道。这边的话，可以把上图看成两部分，一部分是三角形，一部分是矩形就行了。具体实现的代码是这样的。123&lt;div class="info-r"&gt; &lt;span class="btn"&gt;抢&lt;/span&gt;&lt;/div&gt; 12345678910111213141516171819202122.info-r &#123; float: right; .btn &#123; width: 56px; font-size: 32px; color: #ff4400; line-height: 62px; background-color: #ffec68; display: block; text-align: center; position: relative; &amp;:before &#123; border: 31px solid transparent; border-right: 10px solid #ffec68; width: 0; height: 0; left: -41px; position: absolute; content: ' ' &#125; &#125; &#125; 这样就可以了。]]></content>
+      <categories>
+        <category>css3</category>
+      </categories>
+      <tags>
+        <tag>css3</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vscode中使用tab emmet展开失效]]></title>
     <url>%2F2017%2F08%2F12%2Fvscode%E4%B8%AD%E4%BD%BF%E7%94%A8tab-emmet%E5%B1%95%E5%BC%80%E5%A4%B1%E6%95%88%2F</url>
     <content type="text"><![CDATA[问题用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如ul&gt;li+span不能生成&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;span&gt;&lt;/span&gt;&lt;/ul&gt;这种尴尬的问题。 解决其实问题也是很好解决，只要按ctrl+p呼出控制器，然后输入keybindings.json按回车。它自动会跳转到keybindings.json页面，然后新增12345&#123; "key": "tab", "command": "-acceptSelectedSuggestion", "when": "config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"&#125; 就可以解决如上问题。P.S(如果已经存在tab，那就直接把command和when替换即可)。 如果想要键入ul&gt;li+span，让它后面自带提示的话，也非常简单，只要把12345&#123; "key": "tab", "command": "editor.emmet.action.expandAbbreviation", "when": "config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus" &#125; 这个替换就行了。]]></content>
