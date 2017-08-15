@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[顺滑tab]]></title>
+    <url>%2F2017%2F08%2F15%2F%E9%A1%BA%E6%BB%91tab%2F</url>
+    <content type="text"><![CDATA[swiperswiper这个插件在日常开发中使用的频率非常高，他做出的轮播图，高效，易扩展。通过改装swiper，可以实现很多H5特效。 tabtab也是日常开发中常见的功能之一，一些简单的tab我们都会自己手写。但写出来的tab切换非常生硬，为了美观好看，我们可以加上一些过度动画，进行平滑的切换。就像这样： 结合现在可以利用swiper的强大功能，来改造一下我们的tab，来实现如图功能。首先自然是把swiper引入到页面。123456789101112131415&lt;!--列表切换选项卡--&gt;&lt;div class="maple-tab clearFix"&gt; &lt;ul&gt; &lt;li class="active"&gt;&lt;p class="m-border-right"&gt;订单状态&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;订单详情&lt;/p&gt;&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;&lt;!--列表内容--&gt;&lt;div class="swiper-container"&gt; &lt;div class="swiper-wrapper"&gt; &lt;div class="swiper-slide tab-content-1"&gt;列表1内容&lt;/div&gt; &lt;div class="swiper-slide tab-content-2"&gt;列表2内容&lt;/div&gt; &lt;/div&gt;&lt;/div&gt; 12345678910111213141516$(function () &#123; var mySwiper = new Swiper('.swiper-container', &#123; onSlideChangeEnd: function (swiper) &#123; var j=mySwiper.activeIndex; $('.maple-tab li, .maple-tab2 li').removeClass('active').eq(j).addClass('active'); &#125; &#125;) /*列表切换*/ $('.maple-tab li, .maple-tab2 li').on('click', function (e) &#123; e.preventDefault(); //得到当前索引 var i=$(this).index(); $('.maple-tab li, .maple-tab2 li').removeClass('active').eq(i).addClass('active'); mySwiper.slideTo(i,1000,false); &#125;); &#125;); 改造完成。]]></content>
+      <categories>
+        <category>常用插件</category>
+      </categories>
+      <tags>
+        <tag>swiper</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[利用css3实现箭头]]></title>
     <url>%2F2017%2F08%2F14%2F%E5%88%A9%E7%94%A8css3%E5%AE%9E%E7%8E%B0%E7%AE%AD%E5%A4%B4%2F</url>
     <content type="text"><![CDATA[需求在一些开发中，经常会用到一些箭头，如图所示：要实现图上的抢这个箭头，传统的做法就是切一张这样的图片，然后最为背景图就行了。但考虑到节约图片加载资源以及css3的强大特性，我们完全可以用CSS3来实现如图需求。 实现关于如何用css3实现三角形、箭头的方法有很多，百度一下你就知道。这边的话，可以把上图看成两部分，一部分是三角形，一部分是矩形就行了。具体实现的代码是这样的。123&lt;div class="info-r"&gt; &lt;span class="btn"&gt;抢&lt;/span&gt;&lt;/div&gt; 12345678910111213141516171819202122.info-r &#123; float: right; .btn &#123; width: 56px; font-size: 32px; color: #ff4400; line-height: 62px; background-color: #ffec68; display: block; text-align: center; position: relative; &amp;:before &#123; border: 31px solid transparent; border-right: 10px solid #ffec68; width: 0; height: 0; left: -41px; position: absolute; content: ' ' &#125; &#125; &#125; 这样就可以了。]]></content>
