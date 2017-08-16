@@ -14,13 +14,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -112,7 +105,8 @@
 <meta property="og:description" content="需求在一些开发中，经常会用到一些箭头，如图所示：要实现图上的抢这个箭头，传统的做法就是切一张这样的图片，然后最为背景图就行了。但考虑到节约图片加载资源以及css3的强大特性，我们完全可以用CSS3来实现如图需求。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/css3_arrow.png">
-<meta property="og:updated_time" content="2017-08-16T07:58:11.513Z">
+<meta property="og:image" content="http://oughko11e.bkt.clouddn.com/demo.png">
+<meta property="og:updated_time" content="2017-08-16T08:06:35.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用css3实现箭头">
 <meta name="twitter:description" content="需求在一些开发中，经常会用到一些箭头，如图所示：要实现图上的抢这个箭头，传统的做法就是切一张这样的图片，然后最为背景图就行了。但考虑到节约图片加载资源以及css3的强大特性，我们完全可以用CSS3来实现如图需求。">
@@ -410,11 +404,6 @@
           
 
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
-          
 
           
 
@@ -438,8 +427,8 @@
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.info-r</span> &#123;</div><div class="line">       <span class="attribute">float</span>: right;</div><div class="line">       <span class="selector-class">.btn</span> &#123;</div><div class="line">         <span class="attribute">width</span>: <span class="number">56px</span>;</div><div class="line">         <span class="attribute">font-size</span>: <span class="number">32px</span>;</div><div class="line">         <span class="attribute">color</span>: <span class="number">#ff4400</span>;</div><div class="line">         <span class="attribute">line-height</span>: <span class="number">62px</span>;</div><div class="line">         <span class="attribute">background-color</span>: <span class="number">#ffec68</span>;</div><div class="line">         <span class="attribute">display</span>: block;</div><div class="line">         <span class="attribute">text-align</span>: center;</div><div class="line">         <span class="attribute">position</span>: relative;</div><div class="line">         &amp;:before &#123;</div><div class="line">           <span class="attribute">border</span>: <span class="number">31px</span> solid transparent;</div><div class="line">           <span class="attribute">border-right</span>: <span class="number">10px</span> solid <span class="number">#ffec68</span>;</div><div class="line">           <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">           <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">           <span class="attribute">left</span>: -<span class="number">41px</span>;</div><div class="line">           <span class="attribute">position</span>: absolute;</div><div class="line">           <span class="attribute">content</span>: <span class="string">' '</span></div><div class="line">         &#125;</div><div class="line">       &#125;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
 <p>这样就可以了。</p>
 <h2 id="延伸"><a href="#延伸" class="headerlink" title="延伸"></a>延伸</h2><p>利用这种方法我们可以实现三角形，但如果我们要实现诸如<code>&gt;</code>、<code>&lt;</code>这种箭头怎么办呢。其实也很好实现。我们只要设置两个大小不一的三角形，然后将三角形层叠，小的三角形盖住大的三角形的中间区域，然后只展示大的三角形的外边框，就可以实现了。<br>具体实现：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">#demo &#123;</div><div class="line">  width: 100px;</div><div class="line">  height: 100px;</div><div class="line">  background-color: #ccc;</div><div class="line">  position: relative;</div><div class="line">  border: 4px solid #333;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#demo:after, #demo:before &#123;</div><div class="line">  border: solid transparent;</div><div class="line">  content: &apos; &apos;;</div><div class="line">  height: 0;</div><div class="line">  left: 100%;</div><div class="line">  position: absolute;</div><div class="line">  width: 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#demo:after &#123;</div><div class="line">  border-width: 9px;</div><div class="line">  border-left-color: #ccc;</div><div class="line">  top: 15px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#demo:before &#123;</div><div class="line">  border-width: 14px;</div><div class="line">  border-left-color: #333;</div><div class="line">  top: 10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>具体可以参考这篇文章：<a href="https://yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/" target="_blank" rel="external">Css arrows and shapes without markup</a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#demo</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">border</span>: <span class="number">4px</span> solid <span class="number">#333</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#demo</span><span class="selector-pseudo">:after</span>, <span class="selector-id">#demo</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">border</span>: solid transparent;</div><div class="line">  <span class="attribute">content</span>: <span class="string">' '</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#demo</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">  <span class="attribute">border-width</span>: <span class="number">9px</span>;</div><div class="line">  <span class="attribute">border-left-color</span>: <span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">top</span>: <span class="number">15px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#demo</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">border-width</span>: <span class="number">14px</span>;</div><div class="line">  <span class="attribute">border-left-color</span>: <span class="number">#333</span>;</div><div class="line">  <span class="attribute">top</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oughko11e.bkt.clouddn.com/demo.png" alt="demo"><br>具体可以参考这篇文章：<a href="https://yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/" target="_blank" rel="external">Css arrows and shapes without markup</a></p>
 
       
     </div>
@@ -450,36 +439,25 @@
     
 
     
+
+    
       <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>如果您觉得这篇文章对你非常有用，可以请我喝一杯咖啡哦~</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/img/wechatpay.jpg" alt="sunny_desmond WeChat Pay"/>
-        <p>WeChat Pay</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/img/alipay.jpg" alt="sunny_desmond Alipay"/>
-        <p>Alipay</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    sunny_desmond
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sunnyDesmond.github.io/2017/08/14/利用css3实现箭头/" title="利用css3实现箭头">https://sunnyDesmond.github.io/2017/08/14/利用css3实现箭头/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 
       </div>
-    
-
     
 
     <footer class="post-footer">
@@ -731,26 +709,6 @@
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
-
 
         
       </div>
