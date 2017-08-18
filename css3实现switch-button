@@ -87,7 +87,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="swiper," />
+  <meta name="keywords" content="css3," />
 
 
 
@@ -103,20 +103,20 @@
 
 
 
-<meta name="description" content="swiperswiper这个插件在日常开发中使用的频率非常高，他做出的轮播图，高效，易扩展。通过改装swiper，可以实现很多H5特效。 tabtab也是日常开发中常见的功能之一，一些简单的tab我们都会自己手写。但写出来的tab切换非常生硬，为了美观好看，我们可以加上一些过度动画，进行平滑的切换。就像这样：">
-<meta name="keywords" content="swiper">
+<meta name="description" content="需求switch button 在移动端上非常常见。如图：">
+<meta name="keywords" content="css3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="顺滑tab">
-<meta property="og:url" content="https://sunnyDesmond.github.io/顺滑tab.html">
+<meta property="og:title" content="css3实现switch button">
+<meta property="og:url" content="https://sunnyDesmond.github.io/css3实现switch-button">
 <meta property="og:site_name" content="sunny小栈">
-<meta property="og:description" content="swiperswiper这个插件在日常开发中使用的频率非常高，他做出的轮播图，高效，易扩展。通过改装swiper，可以实现很多H5特效。 tabtab也是日常开发中常见的功能之一，一些简单的tab我们都会自己手写。但写出来的tab切换非常生硬，为了美观好看，我们可以加上一些过度动画，进行平滑的切换。就像这样：">
+<meta property="og:description" content="需求switch button 在移动端上非常常见。如图：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oughko11e.bkt.clouddn.com/tab.gif">
-<meta property="og:updated_time" content="2017-08-15T03:21:11.762Z">
+<meta property="og:image" content="https://sunnydesmond.github.io/img/switch.gif">
+<meta property="og:updated_time" content="2017-08-09T09:58:11.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="顺滑tab">
-<meta name="twitter:description" content="swiperswiper这个插件在日常开发中使用的频率非常高，他做出的轮播图，高效，易扩展。通过改装swiper，可以实现很多H5特效。 tabtab也是日常开发中常见的功能之一，一些简单的tab我们都会自己手写。但写出来的tab切换非常生硬，为了美观好看，我们可以加上一些过度动画，进行平滑的切换。就像这样：">
-<meta name="twitter:image" content="http://oughko11e.bkt.clouddn.com/tab.gif">
+<meta name="twitter:title" content="css3实现switch button">
+<meta name="twitter:description" content="需求switch button 在移动端上非常常见。如图：">
+<meta name="twitter:image" content="https://sunnydesmond.github.io/img/switch.gif">
 
 
 
@@ -145,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="https://sunnyDesmond.github.io/顺滑tab.html"/>
+  <link rel="canonical" href="https://sunnyDesmond.github.io/css3实现switch-button"/>
 
 
 
 
 
-  <title>顺滑tab | sunny小栈</title>
+  <title>css3实现switch button | sunny小栈</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sunnyDesmond.github.io/顺滑tab.html">
+    <link itemprop="mainEntityOfPage" href="https://sunnyDesmond.github.io/css3实现switch-button">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sunny_desmond">
@@ -345,7 +345,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">顺滑tab</h2>
+          <h2 class="post-title" itemprop="name headline">css3实现switch button</h2>
         
 
         <div class="post-meta">
@@ -357,8 +357,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T11:08:20+08:00">
-                2017-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-09T17:25:30+08:00">
+                2017-08-09
               </time>
             
 
@@ -380,8 +380,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/常用插件/" itemprop="url" rel="index">
-                    <span itemprop="name">常用插件</span>
+                  <a href="/categories/css3/" itemprop="url" rel="index">
+                    <span itemprop="name">css3</span>
                   </a>
                 </span>
 
@@ -398,9 +398,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/顺滑tab.html#comments" itemprop="discussionUrl">
+                <a href="/css3实现switch-button#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="顺滑tab.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="css3实现switch-button" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -428,11 +428,12 @@
       
 
       
-        <h2 id="swiper"><a href="#swiper" class="headerlink" title="swiper"></a>swiper</h2><p><a href="http://www.swiper.com.cn/" target="_blank" rel="external">swiper</a>这个插件在日常开发中使用的频率非常高，他做出的轮播图，高效，易扩展。通过改装swiper，可以实现很多H5特效。</p>
-<h2 id="tab"><a href="#tab" class="headerlink" title="tab"></a>tab</h2><p>tab也是日常开发中常见的功能之一，一些简单的tab我们都会自己手写。但写出来的tab切换非常生硬，为了美观好看，我们可以加上一些过度动画，进行平滑的切换。就像这样：<br><img src="http://oughko11e.bkt.clouddn.com/tab.gif" alt="tab切换"><br><a id="more"></a></p>
-<h2 id="结合"><a href="#结合" class="headerlink" title="结合"></a>结合</h2><p>现在可以利用swiper的强大功能，来改造一下我们的tab，来实现如图功能。<br>首先自然是把swiper引入到页面。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--列表切换选项卡--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"maple-tab clearFix"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"m-border-right"</span>&gt;</span>订单状态<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>订单详情<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--列表内容--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-container"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-wrapper"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide tab-content-1"</span>&gt;</span>列表1内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide tab-content-2"</span>&gt;</span>列表2内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> mySwiper = <span class="keyword">new</span> Swiper(<span class="string">'.swiper-container'</span>, &#123;</div><div class="line">            onSlideChangeEnd: <span class="function"><span class="keyword">function</span> (<span class="params">swiper</span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> j=mySwiper.activeIndex;</div><div class="line">                $(<span class="string">'.maple-tab li, .maple-tab2 li'</span>).removeClass(<span class="string">'active'</span>).eq(j).addClass(<span class="string">'active'</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">        <span class="comment">/*列表切换*/</span></div><div class="line">        $(<span class="string">'.maple-tab li, .maple-tab2 li'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">            e.preventDefault();</div><div class="line">            <span class="comment">//得到当前索引</span></div><div class="line">            <span class="keyword">var</span> i=$(<span class="keyword">this</span>).index();</div><div class="line">            $(<span class="string">'.maple-tab li, .maple-tab2 li'</span>).removeClass(<span class="string">'active'</span>).eq(i).addClass(<span class="string">'active'</span>);</div><div class="line">            mySwiper.slideTo(i,<span class="number">1000</span>,<span class="literal">false</span>);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
-<p>改造完成。</p>
+        <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>switch button 在移动端上非常常见。<br>如图：<img src="/img/switch.gif" alt="css3 switch button"><br><a id="more"></a></p>
+<h2 id="css3-实现"><a href="#css3-实现" class="headerlink" title="css3 实现"></a>css3 实现</h2><p>现在我们用css3 来实现这个button。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"button-wrap"</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.button-wrap</span> &#123;  </div><div class="line">      <span class="attribute">color</span>: <span class="number">#999</span>;  </div><div class="line">    &#125;  </div><div class="line">      </div><div class="line">    <span class="selector-class">.button-wrap</span> <span class="selector-tag">input</span> &#123;  </div><div class="line">      <span class="attribute">-webkit-tap-highlight-color</span>: <span class="built_in">rgba</span>(0, 0, 0, 0);  </div><div class="line">      <span class="attribute">-webkit-appearance</span>: none;  </div><div class="line">      <span class="attribute">position</span>: relative;  </div><div class="line">      <span class="attribute">width</span>: <span class="number">52px</span>;  </div><div class="line">      <span class="attribute">height</span>: <span class="number">32px</span>;  </div><div class="line">      <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#dfdfdf</span>;  </div><div class="line">      <span class="attribute">outline</span>: <span class="number">0</span>;  </div><div class="line">      <span class="attribute">border-radius</span>: <span class="number">16px</span>;  </div><div class="line">      <span class="attribute">box-sizing</span>: border-box;  </div><div class="line">      <span class="attribute">background-color</span>: <span class="number">#dfdfdf</span>;  </div><div class="line">      <span class="attribute">-webkit-transition</span>: background-color .<span class="number">1s</span>, border .<span class="number">1s</span>;  </div><div class="line">      <span class="attribute">transition</span>: background-color .<span class="number">1s</span>, border .<span class="number">1s</span>;  </div><div class="line">    &#125;  </div><div class="line">      </div><div class="line">    <span class="selector-class">.button-wrap</span> <span class="selector-tag">input</span><span class="selector-pseudo">:before</span> &#123;  </div><div class="line">      <span class="attribute">content</span>: <span class="string">" "</span>;  </div><div class="line">      <span class="attribute">position</span>: absolute;  </div><div class="line">      <span class="attribute">top</span>: <span class="number">0</span>;  </div><div class="line">      <span class="attribute">left</span>: <span class="number">0</span>;  </div><div class="line">      <span class="attribute">width</span>: <span class="number">50px</span>;  </div><div class="line">      <span class="attribute">height</span>: <span class="number">30px</span>;  </div><div class="line">      <span class="attribute">border-radius</span>: <span class="number">15px</span>;  </div><div class="line">      <span class="attribute">background-color</span>: <span class="number">#fdfdfd</span>;  </div><div class="line">      <span class="attribute">-webkit-transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">      <span class="attribute">transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">      <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">      <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1), -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">    &#125;  </div><div class="line">      </div><div class="line">    <span class="selector-class">.button-wrap</span> <span class="selector-tag">input</span><span class="selector-pseudo">:after</span> &#123;  </div><div class="line">      <span class="attribute">content</span>: <span class="string">" "</span>;  </div><div class="line">      <span class="attribute">position</span>: absolute;  </div><div class="line">      <span class="attribute">top</span>: <span class="number">0</span>;  </div><div class="line">      <span class="attribute">left</span>: <span class="number">0</span>;  </div><div class="line">      <span class="attribute">width</span>: <span class="number">30px</span>;  </div><div class="line">      <span class="attribute">height</span>: <span class="number">30px</span>;  </div><div class="line">      <span class="attribute">border-radius</span>: <span class="number">15px</span>;  </div><div class="line">      <span class="attribute">background-color</span>: <span class="number">#fff</span>;  </div><div class="line">      <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(0, 0, 0, .4);  </div><div class="line">      <span class="attribute">-webkit-transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">      <span class="attribute">transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">      <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">      <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35), -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">    &#125;  </div><div class="line">      </div><div class="line">    <span class="selector-class">.button-wrap</span> <span class="selector-tag">input</span><span class="selector-pseudo">:checked</span> &#123;  </div><div class="line">      <span class="attribute">border-color</span>: <span class="number">#04be02</span>;  </div><div class="line">      <span class="attribute">background-color</span>: <span class="number">#04be02</span>;  </div><div class="line">    &#125;  </div><div class="line">      </div><div class="line">    <span class="selector-class">.button-wrap</span> <span class="selector-tag">input</span><span class="selector-pseudo">:checked</span><span class="selector-pseudo">:before</span> &#123;  </div><div class="line">      <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0);  </div><div class="line">      <span class="attribute">transform</span>: <span class="built_in">scale</span>(0);  </div><div class="line">    &#125;  </div><div class="line">      </div><div class="line">    <span class="selector-class">.button-wrap</span> <span class="selector-tag">input</span><span class="selector-pseudo">:checked</span><span class="selector-pseudo">:after</span> &#123;  </div><div class="line">      <span class="attribute">-webkit-transform</span>: <span class="built_in">translateX</span>(20px);  </div><div class="line">      <span class="attribute">transform</span>: <span class="built_in">translateX</span>(20px);  </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>这种比较简洁，非常适合在移动端中使用。但是在pc上的话，我发现在chrome浏览器上是ok的。（ps：chrome真的是太流弊了~）在火狐上的话直接GG。IE 9也是可以的，只不过没有缓动动画。<br>IE10正常，IE11貌似不行？？？？没细究。那接下来还有一种版本，兼容型不错。ie未测，FF还不错。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"button-wrap-ff"</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"switchCP"</span> <span class="attr">class</span>=<span class="string">"switchCP"</span>&gt;</span>  </div><div class="line">          <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>  <span class="attr">id</span>=<span class="string">"switchCP"</span> <span class="attr">checked</span>=<span class="string">"checked"</span> <span class="attr">class</span>=<span class="string">"switchCP-input"</span>&gt;</span>  </div><div class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"switchCP-box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">      <span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.button-wrap-ff</span> &#123;  </div><div class="line">     <span class="attribute">color</span>: <span class="number">#999</span>;  </div><div class="line">   &#125;  </div><div class="line">     </div><div class="line">   <span class="selector-class">.switchCP</span> &#123;  </div><div class="line">     <span class="attribute">-webkit-tap-highlight-color</span>: <span class="built_in">rgba</span>(0, 0, 0, 0);  </div><div class="line">   &#125;  </div><div class="line">     </div><div class="line">   <span class="selector-class">.switchCP</span>&gt;* &#123;  </div><div class="line">     <span class="attribute">pointer-events</span>: none;  </div><div class="line">   &#125;  </div><div class="line">     </div><div class="line">   <span class="selector-class">.switchCP-input</span> &#123;  </div><div class="line">     <span class="attribute">-webkit-tap-highlight-color</span>: <span class="built_in">rgba</span>(0, 0, 0, 0);  </div><div class="line">     <span class="attribute">position</span>: absolute;  </div><div class="line">     <span class="attribute">left</span>: -<span class="number">9999px</span>;  </div><div class="line">   &#125;  </div><div class="line">         </div><div class="line">   <span class="selector-class">.switchCP-input</span><span class="selector-pseudo">:checked</span>~<span class="selector-class">.switchCP-box</span> &#123;  </div><div class="line">     <span class="attribute">border-color</span>: <span class="number">#04be02</span>;  </div><div class="line">     <span class="attribute">background-color</span>: <span class="number">#04be02</span>;  </div><div class="line">   &#125;  </div><div class="line">     </div><div class="line">   <span class="selector-class">.switchCP-input</span><span class="selector-pseudo">:checked</span>~<span class="selector-class">.switchCP-box</span><span class="selector-pseudo">:before</span> &#123;  </div><div class="line">     <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0);  </div><div class="line">     <span class="attribute">transform</span>: <span class="built_in">scale</span>(0);  </div><div class="line">   &#125;  </div><div class="line">     </div><div class="line">   <span class="selector-class">.switchCP-input</span><span class="selector-pseudo">:checked</span>~<span class="selector-class">.switchCP-box</span><span class="selector-pseudo">:after</span> &#123;  </div><div class="line">     <span class="attribute">-webkit-transform</span>: <span class="built_in">translateX</span>(20px);  </div><div class="line">     <span class="attribute">transform</span>: <span class="built_in">translateX</span>(20px);  </div><div class="line">   &#125;  </div><div class="line">       </div><div class="line">   <span class="selector-class">.switchCP-box</span> &#123;  </div><div class="line">     <span class="attribute">display</span>: block;  </div><div class="line">     <span class="attribute">position</span>: relative;  </div><div class="line">     <span class="attribute">width</span>: <span class="number">52px</span>;  </div><div class="line">     <span class="attribute">height</span>: <span class="number">32px</span>;  </div><div class="line">     <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#dfdfdf</span>;  </div><div class="line">     <span class="attribute">outline</span>: <span class="number">0</span>;  </div><div class="line">     <span class="attribute">border-radius</span>: <span class="number">16px</span>;  </div><div class="line">     <span class="attribute">box-sizing</span>: border-box;  </div><div class="line">     <span class="attribute">background-color</span>: <span class="number">#dfdfdf</span>;  </div><div class="line">     <span class="attribute">-webkit-transition</span>: background-color .<span class="number">1s</span>, border .<span class="number">1s</span>;  </div><div class="line">     <span class="attribute">transition</span>: background-color .<span class="number">1s</span>, border .<span class="number">1s</span>;  </div><div class="line">   &#125;  </div><div class="line">     </div><div class="line">   <span class="selector-class">.switchCP-box</span><span class="selector-pseudo">:before</span> &#123;  </div><div class="line">     <span class="attribute">content</span>: <span class="string">" "</span>;  </div><div class="line">     <span class="attribute">position</span>: absolute;  </div><div class="line">     <span class="attribute">top</span>: <span class="number">0</span>;  </div><div class="line">     <span class="attribute">left</span>: <span class="number">0</span>;  </div><div class="line">     <span class="attribute">width</span>: <span class="number">50px</span>;  </div><div class="line">     <span class="attribute">height</span>: <span class="number">30px</span>;  </div><div class="line">     <span class="attribute">border-radius</span>: <span class="number">15px</span>;  </div><div class="line">     <span class="attribute">background-color</span>: <span class="number">#fdfdfd</span>;  </div><div class="line">     <span class="attribute">-webkit-transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">     <span class="attribute">transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">     <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">     <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1), -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.45, 1, .4, 1);  </div><div class="line">   &#125;  </div><div class="line">     </div><div class="line">   <span class="selector-class">.switchCP-box</span><span class="selector-pseudo">:after</span> &#123;  </div><div class="line">     <span class="attribute">content</span>: <span class="string">" "</span>;  </div><div class="line">     <span class="attribute">position</span>: absolute;  </div><div class="line">     <span class="attribute">top</span>: <span class="number">0</span>;  </div><div class="line">     <span class="attribute">left</span>: <span class="number">0</span>;  </div><div class="line">     <span class="attribute">width</span>: <span class="number">30px</span>;  </div><div class="line">     <span class="attribute">height</span>: <span class="number">30px</span>;  </div><div class="line">     <span class="attribute">border-radius</span>: <span class="number">15px</span>;  </div><div class="line">     <span class="attribute">background-color</span>: <span class="number">#fff</span>;  </div><div class="line">     <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(0, 0, 0, .4);  </div><div class="line">     <span class="attribute">-webkit-transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">     <span class="attribute">transition</span>: -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">     <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">     <span class="attribute">transition</span>: transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35), -webkit-transform .<span class="number">35s</span> <span class="built_in">cubic-bezier</span>(.4, .4, .25, 1.35);  </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>ok，大功告成~</p>
 
       
     </div>
@@ -453,7 +454,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sunnyDesmond.github.io/顺滑tab.html" title="顺滑tab">https://sunnyDesmond.github.io/顺滑tab.html</a>
+    <a href="https://sunnyDesmond.github.io/css3实现switch-button" title="css3实现switch button">https://sunnyDesmond.github.io/css3实现switch-button</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -468,7 +469,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/swiper/" rel="tag"># swiper</a>
+            <a href="/tags/css3/" rel="tag"># css3</a>
           
         </div>
       
@@ -481,8 +482,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/利用css3实现箭头.html" rel="next" title="利用css3实现箭头">
-                <i class="fa fa-chevron-left"></i> 利用css3实现箭头
+              <a href="/start" rel="next" title="开篇">
+                <i class="fa fa-chevron-left"></i> 开篇
               </a>
             
           </div>
@@ -491,8 +492,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/购房杂记.html" rel="prev" title="购房杂记">
-                购房杂记 <i class="fa fa-chevron-right"></i>
+              <a href="/阻止页面滚动误触链接" rel="prev" title="阻止页面滚动误触链接">
+                阻止页面滚动误触链接 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -680,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#swiper"><span class="nav-number">1.</span> <span class="nav-text">swiper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab"><span class="nav-number">2.</span> <span class="nav-text">tab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合"><span class="nav-number">3.</span> <span class="nav-text">结合</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css3-实现"><span class="nav-number">2.</span> <span class="nav-text">css3 实现</span></a></li></ol></div>
             
 
           </div>
@@ -828,9 +829,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://sunnyDesmond.github.io/顺滑tab.html';
-          this.page.identifier = '顺滑tab.html';
-          this.page.title = '顺滑tab';
+          this.page.url = 'https://sunnyDesmond.github.io/css3实现switch-button';
+          this.page.identifier = 'css3实现switch-button';
+          this.page.title = 'css3实现switch button';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-sunnydesmond-github-io.disqus.com/embed.js';

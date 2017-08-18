@@ -87,7 +87,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="vscode," />
 
 
 
@@ -103,20 +103,18 @@
 
 
 
-<meta name="description" content="需求web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。 demo图">
-<meta name="keywords" content="javascript">
+<meta name="description" content="问题用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如ul&amp;gt;li+span不能生成&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/">
+<meta name="keywords" content="vscode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="textarea高度自适应自动展开">
-<meta property="og:url" content="https://sunnyDesmond.github.io/TEXTAREA高度自适应自动展开.html">
+<meta property="og:title" content="vscode中使用tab emmet展开失效">
+<meta property="og:url" content="https://sunnyDesmond.github.io/vscode中使用tab-emmet展开失效">
 <meta property="og:site_name" content="sunny小栈">
-<meta property="og:description" content="需求web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。 demo图">
+<meta property="og:description" content="问题用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如ul&amp;gt;li+span不能生成&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oughko11e.bkt.clouddn.com/textaea.gif">
-<meta property="og:updated_time" content="2017-08-18T08:21:00.072Z">
+<meta property="og:updated_time" content="2017-08-12T08:23:35.596Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="textarea高度自适应自动展开">
-<meta name="twitter:description" content="需求web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。 demo图">
-<meta name="twitter:image" content="http://oughko11e.bkt.clouddn.com/textaea.gif">
+<meta name="twitter:title" content="vscode中使用tab emmet展开失效">
+<meta name="twitter:description" content="问题用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如ul&amp;gt;li+span不能生成&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/">
 
 
 
@@ -145,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://sunnyDesmond.github.io/TEXTAREA高度自适应自动展开.html"/>
+  <link rel="canonical" href="https://sunnyDesmond.github.io/vscode中使用tab-emmet展开失效"/>
 
 
 
 
 
-  <title>textarea高度自适应自动展开 | sunny小栈</title>
+  <title>vscode中使用tab emmet展开失效 | sunny小栈</title>
   
 
 
@@ -328,7 +326,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sunnyDesmond.github.io/TEXTAREA高度自适应自动展开.html">
+    <link itemprop="mainEntityOfPage" href="https://sunnyDesmond.github.io/vscode中使用tab-emmet展开失效">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sunny_desmond">
@@ -345,7 +343,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">textarea高度自适应自动展开</h2>
+          <h2 class="post-title" itemprop="name headline">vscode中使用tab emmet展开失效</h2>
         
 
         <div class="post-meta">
@@ -357,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T13:41:27+08:00">
-                2017-08-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T16:09:16+08:00">
+                2017-08-12
               </time>
             
 
@@ -380,8 +378,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
+                  <a href="/categories/开发工具/" itemprop="url" rel="index">
+                    <span itemprop="name">开发工具</span>
                   </a>
                 </span>
 
@@ -398,9 +396,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/TEXTAREA高度自适应自动展开.html#comments" itemprop="discussionUrl">
+                <a href="/vscode中使用tab-emmet展开失效#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="TEXTAREA高度自适应自动展开.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="vscode中使用tab-emmet展开失效" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -428,22 +426,11 @@
       
 
       
-        <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>web开发中，使用textarea的场景非常常见。但是原生的textarea不能根据用户输入的内容来伸缩自己的高度，这个特性感觉很反人类，在一些特定下我们希望它的高度能随着内容自适应，而不出现滚动条。就像下面的图一样。</p>
-<h2 id="demo图"><a href="#demo图" class="headerlink" title="demo图"></a>demo图</h2><p><img src="http://oughko11e.bkt.clouddn.com/textaea.gif" alt="textarea高度自适应图"></p>
-<a id="more"></a>
-<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><ul>
-<li><p>html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"textarea"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>js</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">// textarea 自适应高度  </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeExpandingArea</span>(<span class="params">el</span>) </span>&#123;  </div><div class="line">    <span class="keyword">var</span> setStyle = <span class="function"><span class="keyword">function</span>(<span class="params">el</span>) </span>&#123;  </div><div class="line">        el.style.height = <span class="string">'auto'</span>;  </div><div class="line">        el.style.height = el.scrollHeight + <span class="string">'px'</span>;  </div><div class="line">        <span class="comment">// console.log(el.scrollHeight);  </span></div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">var</span> delayedResize = <span class="function"><span class="keyword">function</span>(<span class="params">el</span>) </span>&#123;  </div><div class="line">        <span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">                setStyle(el)  </div><div class="line">            &#125;,  </div><div class="line">            <span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">if</span> (el.addEventListener) &#123;  </div><div class="line">        el.addEventListener(<span class="string">'input'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            setStyle(el)  </div><div class="line">        &#125;, <span class="literal">false</span>);  </div><div class="line">        setStyle(el)  </div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (el.attachEvent) &#123;  </div><div class="line">        el.attachEvent(<span class="string">'onpropertychange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            setStyle(el)  </div><div class="line">        &#125;);  </div><div class="line">        setStyle(el)  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.VBArray &amp;&amp; <span class="built_in">window</span>.addEventListener) &#123; <span class="comment">//IE9  </span></div><div class="line">        el.attachEvent(<span class="string">"onkeydown"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            <span class="keyword">var</span> key = <span class="built_in">window</span>.event.keyCode;  </div><div class="line">            <span class="keyword">if</span> (key == <span class="number">8</span> || key == <span class="number">46</span>) delayedResize(el);  </div><div class="line">  </div><div class="line">        &#125;);  </div><div class="line">        el.attachEvent(<span class="string">"oncut"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            delayedResize(el);  </div><div class="line">        &#125;); <span class="comment">//处理粘贴  </span></div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">makeExpandingArea(textarea);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>这个问题目前发现在安卓机上，有时候会这个方法会不走，（我这边页面用在混合app开发上），为了解决这个问题，这边还有一个稍微次一点的方法，这边也贴出来，提供给有需要的同学<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">oninput</span>=<span class="string">"autosize(this)"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">// 自动展开textarea</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">autosize</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> el = obj;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        el.style.cssText = <span class="string">'height:auto; padding:0'</span>;</div><div class="line">        <span class="comment">// for box-sizing other than "content-box" use:</span></div><div class="line">        <span class="comment">// el.style.cssText = '-moz-box-sizing:content-box';</span></div><div class="line">        el.style.cssText = <span class="string">'height:'</span> + el.scrollHeight + <span class="string">'px'</span>;</div><div class="line">    &#125;, <span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>使用这个方法，textarea会根据内容的增加减少而变化，但如果先输入文字然后再删除的话，textarea不会完全恢复到原来的高度。。。算是一点点的小遗憾，但是兼容性不错。</p>
-<h2 id="简洁的一种写法"><a href="#简洁的一种写法" class="headerlink" title="简洁的一种写法"></a>简洁的一种写法</h2><p>这边还有一个最简洁的写法，但是bug也是最多的.最致命的是,可以跟随页面内容增加而调整textarea的高度，但不会随着内容的减少而减小高度。o(╯□╰)o<br>这边也放出代码：<font color="#ff4400" size="12">（不推荐）</font><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">onpropertychange</span>=<span class="string">"this.style.height=this.scrollHeight + 'px'"</span> <span class="attr">oninput</span>=<span class="string">"this.style.height=this.scrollHeight + 'px'"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="一些黑科技"><a href="#一些黑科技" class="headerlink" title="一些黑科技"></a>一些黑科技</h2><p>当然了，网上的大神们，为了实现这种效果也是操碎了心，还有很多黑科技写法，诸如在<code>div</code>上加<code>contenteditable=&quot;true&quot;</code>来假冒<code>texta</code>,都是可以的，按需使用即可。附上张鑫旭大神的这篇文章： <a href="http://www.zhangxinxu.com/wordpress/2010/12/div-textarea-height-auto/" target="_blank" rel="external">div模拟textarea文本域轻松实现高度自适应</a></p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如<code>ul&gt;li+span</code>不能生成<code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;span&gt;&lt;/span&gt;&lt;/ul&gt;</code>这种尴尬的问题。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>其实问题也是很好解决，只要按<code>ctrl+p</code>呼出控制器，然后输入<code>keybindings.json</code>按回车。它自动会跳转到<code>keybindings.json</code>页面，然后新增<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"key"</span>: <span class="string">"tab"</span>,</div><div class="line">  <span class="string">"command"</span>: <span class="string">"-acceptSelectedSuggestion"</span>,</div><div class="line">  <span class="string">"when"</span>: <span class="string">"config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>就可以解决如上问题。P.S(如果已经存在tab，那就直接把command和when替换即可)。</p>
+<p>如果想要键入<code>ul&gt;li+span</code>，让它后面自带提示的话，也非常简单，只要把<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="string">"key"</span>: <span class="string">"tab"</span>,                  </div><div class="line">  <span class="string">"command"</span>: <span class="string">"editor.emmet.action.expandAbbreviation"</span>,</div><div class="line">  <span class="string">"when"</span>: <span class="string">"config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"</span> </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这个替换就行了。</p>
 
       
     </div>
@@ -464,7 +451,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sunnyDesmond.github.io/TEXTAREA高度自适应自动展开.html" title="textarea高度自适应自动展开">https://sunnyDesmond.github.io/TEXTAREA高度自适应自动展开.html</a>
+    <a href="https://sunnyDesmond.github.io/vscode中使用tab-emmet展开失效" title="vscode中使用tab emmet展开失效">https://sunnyDesmond.github.io/vscode中使用tab-emmet展开失效</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -479,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/vscode/" rel="tag"># vscode</a>
           
         </div>
       
@@ -492,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/使用FileReader实现图片上传预览.html" rel="next" title="使用FileReader实现图片上传预览">
-                <i class="fa fa-chevron-left"></i> 使用FileReader实现图片上传预览
+              <a href="/基于JQ的平滑滚动到顶部插件" rel="next" title="基于JQ的平滑滚动到顶部插件">
+                <i class="fa fa-chevron-left"></i> 基于JQ的平滑滚动到顶部插件
               </a>
             
           </div>
@@ -502,8 +489,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/基于JQ的平滑滚动到顶部插件.html" rel="prev" title="基于JQ的平滑滚动到顶部插件">
-                基于JQ的平滑滚动到顶部插件 <i class="fa fa-chevron-right"></i>
+              <a href="/利用css3实现箭头" rel="prev" title="利用css3实现箭头">
+                利用css3实现箭头 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -691,7 +678,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#demo图"><span class="nav-number">2.</span> <span class="nav-text">demo图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现代码"><span class="nav-number">3.</span> <span class="nav-text">实现代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容性"><span class="nav-number">4.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简洁的一种写法"><span class="nav-number">5.</span> <span class="nav-text">简洁的一种写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些黑科技"><span class="nav-number">6.</span> <span class="nav-text">一些黑科技</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li></ol></div>
             
 
           </div>
@@ -839,9 +826,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://sunnyDesmond.github.io/TEXTAREA高度自适应自动展开.html';
-          this.page.identifier = 'TEXTAREA高度自适应自动展开.html';
-          this.page.title = 'textarea高度自适应自动展开';
+          this.page.url = 'https://sunnyDesmond.github.io/vscode中使用tab-emmet展开失效';
+          this.page.identifier = 'vscode中使用tab-emmet展开失效';
+          this.page.title = 'vscode中使用tab emmet展开失效';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-sunnydesmond-github-io.disqus.com/embed.js';
