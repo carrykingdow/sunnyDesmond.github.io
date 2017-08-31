@@ -2,12 +2,22 @@
 title: 一份简单的gulpfile 配置文件
 date: 2017-08-25 17:55:12
 keywords: 一份简单的gulpfile 配置文件
-description: 一份简单的gulpfile 配置文件
 tags: [gulp]
 categories: "开发工具"
 ---
 ## gulp
 gulp在前端开发中，是一把利器，可以帮我们完成一堆重复繁琐的工作，解放双手，提高生产力。
+## 文件目录
+``` html
+├─html
+├─img
+├─js
+├─lib
+│  ├─css
+│  ├─fonts
+│  └─js
+└─sass
+```
 ## 配置文件
 这边把一份自己的常用的配置文件，贴出来。未来有新需求的话，再来更新文件。
 <!--more-->
