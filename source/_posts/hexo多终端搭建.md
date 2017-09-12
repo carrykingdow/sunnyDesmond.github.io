@@ -43,7 +43,7 @@ deploy:
 6. cd到你的项目，执行`npm install` ...嘟。。。安装成功 😄
 7. 执行`git clone https://github.com/iissnan/hexo-theme-next themes/next` 我这边用的next主题。。。如果不是这个主题的话，不好意思，你可能要看一下其他主题的配置文件了
 8. 将`_config-theme.yml`（也就是刚刚说新建的文件config文件）里面的内容全部赋值 粘贴到`themes／主题／`下的`_config.yml`里面
-9. 运行 `hexo new "xx" `, `hexo clean`,`hexo g`,`hexo s`,在浏览器中打开你的`localhost:4000`如果成功看到页面。。那么恭喜你成功了。。。如果没有，请好好检查一下，然后发布文章`hexo d`即可(如果是mac的话，记得加上`sudo`,不让可能出现这种情况
+9. 运行 `hexo new "xx" `, `hexo clean`,`hexo g`,`hexo s`,在浏览器中打开你的`localhost:4000`如果成功看到页面。。那么恭喜你成功了。。。如果没有，请好好检查一下，然后发布文章`hexo d`即可(如果是mac的话，记得加上`sudo`,不然可能出现这种情况
 
 ``` javascript
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
