@@ -79,7 +79,8 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repository: https://github.com/SunnyDesmond/sunnyDesmond.github.io.git
+  # repository: https://github.com/SunnyDesmond/sunnyDesmond.github.io.git
+  repository: git@github.com:SunnyDesmond/sunnyDesmond.github.io.git
   branch: master
 
 # 自动生成sitemap
