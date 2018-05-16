@@ -147,3 +147,8 @@ gulp.task('default', ['build'], function() {
     "del": "^3.0.0"
   },
 ```
+##一些更新
+实际开发中我们可能会需要区分开发环境，然后就有了这份更新的gulpfile。由于文件太多了我上传到github [gulp-template](https://github.com/SunnyDesmond/gulp-template)上了。
+
+##webpack
+最近有折腾了一个webpack多页面配置，也上传到了github [webpack_multi_page_template](https://github.com/SunnyDesmond/webpack_multi_page_template)

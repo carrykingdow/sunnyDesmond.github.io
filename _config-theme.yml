@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "sunny小栈 感悟 分享"
+keywords: "一些工作生活记录"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -47,10 +47,10 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories
+  categories: /categories/
   #about: /about/
   archives: /archives/
-  tags: /tags
+  tags: /tags/
   # sitemap: /sitemap.xml
   # commonweal: /404/
 
@@ -78,9 +78,9 @@ menu_icons:
 
 # Schemes
 # scheme: Muse
-scheme: Mist
+# scheme: Mist
 # scheme: Pisces
-# scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -559,7 +559,7 @@ pace: true
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-bounce
+pace_theme: pace-theme-flash
 
 
 
