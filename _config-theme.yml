@@ -248,7 +248,7 @@ highlight_theme: normal
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
 font:
-  enable: true
+  enable: false
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
   host:
@@ -256,7 +256,7 @@ font:
   # Global font settings used on <body> element.
   global:
     # external: true will load this font family from host.
-    external: true
+    external: fasle
     family: Lato
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
@@ -310,7 +310,7 @@ baidu_analytics: f43ce9c53c3885b8c026852576debbf1
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: https-sunnydesmond-github-io
   count: true
 
@@ -416,8 +416,8 @@ vkontakte_api:
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
-  enable: true
-  id:     #<app_id>
+  enable: false
+  id:     11621
   color:  fc6423
 
 
@@ -432,17 +432,17 @@ leancloud_visitors:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: true
+  enable: false
   # custom uv span for the whole site
-  site_uv: true
+  site_uv: false
   site_uv_header: <i class="fa fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
-  site_pv: true
+  site_pv: false
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
@@ -564,7 +564,7 @@ pace_theme: pace-theme-flash
 
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -573,7 +573,7 @@ three_waves: false
 canvas_lines: false
 
 # canvas_sphere
-canvas_sphere: true
+canvas_sphere: false
 
 # Only fit scheme Pisces
 # Canvas-ribbon
