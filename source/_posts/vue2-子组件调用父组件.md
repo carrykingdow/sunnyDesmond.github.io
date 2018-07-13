@@ -3,8 +3,8 @@ title: vue2 子组件调用父组件
 date: 2017-12-23 15:58:15
 keywords:
 description:
-tags: [javascript]
-categories: "javascript"
+tags: [vue]
+categories: "js"
 ---
 ## 一些插曲
 时间过的真快。没几天就要圣诞节了。看了一下以前的日志，果然好久没有更新了。。。

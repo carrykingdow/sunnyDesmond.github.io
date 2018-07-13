@@ -3,8 +3,8 @@ title: vue 2.0 渲染HTML
 date: 2017-11-16 14:25:40
 keywords:
 description: 
-tags: [javascript]
-categories: "javascript"
+tags: [vue]
+categories: "js"
 ---
 使用vue添加文本的时候，我们再也不用像jq一样使用append方法插入后台传过来的标签或者数据了。使用`v-text`和`v-html`我们可以轻松搞定一切。
 最近在使用vue渲染一段来自后台文本编译器传过来的数据的时候，发现`v-html`不好用了。代码和图示如下：

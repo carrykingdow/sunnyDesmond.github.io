@@ -1,8 +1,8 @@
 ---
 title: 使用FileReader实现图片上传预览
 date: 2017-08-10 13:21:34
-tags: [javascript]
-categories: "javascript"
+tags: [js]
+categories: "js"
 ---
 ## 需求
 web开发中经常会出现需要点击按钮然后上传图片这样的功能。一般我们会用第三方插件来实现。但其实如果需求不是很复杂的话，我们使用H5的FileReader就可以满足开发需求。

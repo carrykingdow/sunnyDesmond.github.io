@@ -1,8 +1,8 @@
 ---
 title: textarea高度自适应自动展开
 date: 2017-08-10 13:41:27
-tags: [javascript]
-categories: "javascript"
+tags: [js]
+categories: "js"
 update: 2017-08-18 16:14:32
 ---
 ## 需求

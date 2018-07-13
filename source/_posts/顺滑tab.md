@@ -1,8 +1,8 @@
 ---
 title: 顺滑tab
 date: 2017-08-15 11:08:20
-tags: [swiper]
-categories: "常用插件"
+tags: [js]
+categories: "js"
 ---
 ## swiper
 [swiper](http://www.swiper.com.cn/)这个插件在日常开发中使用的频率非常高，他做出的轮播图，高效，易扩展。通过改装swiper，可以实现很多H5特效。

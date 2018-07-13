@@ -3,8 +3,8 @@ title: ajax 请求后台跨域
 date: 2018-06-05 10:29:57
 keywords:
 description:
-tags: [javascript]
-categories: "javascript"
+tags: [js]
+categories: "js"
 ---
 ## 坑爹的问题
 最近在项目中遇到一个跨域问题，坑了好久，查阅了很多资料终于解决了，特此记录。

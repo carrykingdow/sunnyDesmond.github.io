@@ -4,7 +4,7 @@ date: 2018-07-04 16:26:56
 keywords:
 description:
 tags: [vue]
-categories: "vue"
+categories: "js"
 ---
 ## 一些牢骚
 

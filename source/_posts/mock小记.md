@@ -4,7 +4,7 @@ date: 2017-09-11 15:05:02
 keywords: vue mock小记
 description:
 tags: [mockjs,vue]
-categories: "开发工具"
+categories: "js"
 ---
 
 ## 关于mockjs

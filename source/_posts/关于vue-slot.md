@@ -4,7 +4,7 @@ date: 2018-05-16 10:27:20
 keywords:
 description:
 tags: [vue]
-categories: "javascript"
+categories: "js"
 ---
 ## 关于slot
 vue的slot具有很强大的功能，但是由于平常时间很少使用，导致对其很陌生。今天花了一点时间了解了一下，发现它很好用，也很好理解。

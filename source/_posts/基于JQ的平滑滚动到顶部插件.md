@@ -1,8 +1,8 @@
 ---
 title: 基于JQ的平滑滚动到顶部插件
 date: 2017-08-10 14:36:03
-tags: [javascript]
-categories: "javascript"
+tags: [js]
+categories: "js"
 ---
 ## 需求
 页面过长的时候，滑到底部之后要想再翻到网站的顶部查看内容，如果单纯依靠手指划显然不太友好。这时点击回到顶部的功能就显得非常人性化。

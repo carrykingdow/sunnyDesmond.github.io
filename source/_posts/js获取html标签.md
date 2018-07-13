@@ -3,8 +3,8 @@ title: js获取html标签
 date: 2017-10-25 15:45:51
 keywords:
 description:
-tags: [javascript]
-categories: "javascript"
+tags: [js]
+categories: "js"
 ---
 很多时候我们会用到这样的样式
 ```css
