@@ -1,5 +1,5 @@
 ---
-title: mac 提示文件已损坏解决办法
+title: mac提示文件已损坏解决办法-不一定有效
 date: 2018-07-26 11:14:53
 keywords: 
 description: 
