@@ -88,7 +88,7 @@
 <meta property="og:description" content="一次私活经历">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://sunnydesmond.github.io/img/dance.gif">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.567Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一次私活经历">
 <meta name="twitter:description" content="一次私活经历">
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -392,7 +392,7 @@
       
 
       
-        <p>呼呼~时间真快，转眼间国庆已经过完了，而我已经工作了第三天了（再次羡慕一下放8天的同学）~</p>
+        <p>呼呼<del>时间真快，转眼间国庆已经过完了，而我已经工作了第三天了（再次羡慕一下放8天的同学）</del></p>
 <h2 id="关于私活"><a href="#关于私活" class="headerlink" title="关于私活"></a>关于私活</h2><p>我相信，做前端的小伙伴一定有过接私活的经历。接私活有以下几个优点：</p>
 <ol>
 <li>丰富我们的闲暇时间</li>
@@ -401,6 +401,7 @@
 <li>当然了，可以赚取佣金（个人觉得是最重要的【手动滑稽】）</li>
 </ol>
 <a id="more"></a>
+
 <h2 id="一次特殊的经历"><a href="#一次特殊的经历" class="headerlink" title="一次特殊的经历"></a>一次特殊的经历</h2><p>趁着最近公司不忙，我也接了几个私活，成功的，我这边就不说了，主要记一下失败的一次。<br>在某一个阳光明媚的早上，我打开了某一社交网站，加粗加黑的标题【长期招收兼职前端开发】像一盏黑夜中的白炽灯，闪瞎了我24k钛合金狗眼。接下来，加q，详聊，这边就不赘述了。<br>需求是做一个响应式企业站。拿到的是常规自适应首页psd（先做首页），没有响应式布局。只需切图，无需做数据交互。<br>ok，没问题，直接开搞，熬了几个晚上，兴致勃勃，把代码打包发给了他们。</p>
 <ul>
 <li>“这边需要加个视频播放按钮，可以点击播放”。</li>
@@ -420,11 +421,16 @@
 <ol>
 <li><p>鼠标hover，让png变色，常规的做法无非几种，要么用字体文件，改变color值。要么用两套背景色，切换背景图。 示例图：<img src="img/dance.gif" alt="示例图"> 最后一种办法则是使用css3的 filter：dorp-box() 做 drop-box是css3的一个投影属性写法。 鉴于他们死活不肯给两套背景图的前提下，我这边是这样处理的 </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"> //将整个boxoverflow:hidden;</span><br><span class="line"> //中间图标部分</span><br><span class="line"> <span class="selector-class">.icon</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">background-size</span>: auto <span class="number">100%</span>;</span><br><span class="line">        <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">        <span class="attribute">position</span>: relative;</span><br><span class="line">        &amp;.icon1 &#123;</span><br><span class="line">          @<span class="keyword">include</span> bg(<span class="string">'../../dist/img/adv_1.png'</span>);</span><br><span class="line">        &#125;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    &amp;:hover &#123;</span><br><span class="line">        <span class="selector-tag">background-color</span>: <span class="selector-id">#f96b6b</span>;</span><br><span class="line">        <span class="selector-tag">box-shadow</span>: 0 0 15<span class="selector-tag">px</span> <span class="selector-id">#f96b6b</span>;</span><br><span class="line">        <span class="selector-class">.icon</span> &#123;</span><br><span class="line">          <span class="attribute">left</span>: -<span class="number">100px</span>;</span><br><span class="line">          <span class="attribute">border-right</span>: <span class="number">200px</span> solid transparent;</span><br><span class="line">          <span class="attribute">filter</span>: <span class="built_in">drop-shadow</span>(#fff 200px 0px);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>用boder-right撑开整个icon，将投影放入撑开的区域，最后设置投影颜色~<br>更多关于drop-box，可以<a href="http://www.zhangxinxu.com/wordpress/2016/05/css3-filter-drop-shadow-vs-box-shadow/" target="_blank" rel="noopener">参考这个</a></p>
+
+<p>用boder-right撑开整个icon，将投影放入撑开的区域，最后设置投影颜色~
+更多关于drop-box，可以<a href="http://www.zhangxinxu.com/wordpress/2016/05/css3-filter-drop-shadow-vs-box-shadow/" target="_blank" rel="noopener">参考这个</a></p>
 </li>
-<li>做响应式网站的时候，设计需要给出响应式布局psd图吗？</li>
-<li>网上兼职的时候，最好能有个定金，避免出现类似情况。</li>
-<li>在没有完工的时候，不要交出代码，可以给个预览版本。可以将自己的代码放到自己的服务器上供对方预览。用构建工具的话，只给build或者dist目录下的文件，源码完工的时候给</li>
+<li><p>做响应式网站的时候，设计需要给出响应式布局psd图吗？</p>
+</li>
+<li><p>网上兼职的时候，最好能有个定金，避免出现类似情况。</p>
+</li>
+<li><p>在没有完工的时候，不要交出代码，可以给个预览版本。可以将自己的代码放到自己的服务器上供对方预览。用构建工具的话，只给build或者dist目录下的文件，源码完工的时候给</p>
+</li>
 <li><p>学会了用ps改变图层的颜色，新技能 √get</p>
 <p><a href="https://gitee.com/sunny_des/new_project.git" target="_blank" rel="noopener">项目地址：</a></p>
 </li>

@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/demo_video.png">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/demo_video_full.png">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/can_i_use.png">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.575Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让video在div中全屏">
 <meta name="twitter:description" content="需求不废话，直接上需求。需要实现在一个5500*500的div中，让div中的video自动铺满，显示全屏。如图1：">
@@ -334,7 +334,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -390,11 +390,15 @@
       
 
       
-        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>不废话，直接上需求。需要实现在一个5500*500的div中，让div中的video自动铺满，显示全屏。如图1：<br><img src="http://oughko11e.bkt.clouddn.com/demo_video.png" alt="图一"><br><a id="more"></a></p>
-<h1 id="坑爹"><a href="#坑爹" class="headerlink" title="坑爹"></a>坑爹</h1><p>当你尝试这么写的话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.video &#123;</span><br><span class="line">        width: 500px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        background-color: #bbc13d;</span><br><span class="line">        margin: 50px auto;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">.video video &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">        height: 100%;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>不废话，直接上需求。需要实现在一个5500*500的div中，让div中的video自动铺满，显示全屏。如图1：<br><img src="http://oughko11e.bkt.clouddn.com/demo_video.png" alt="图一"></p>
+<a id="more"></a>
+
+<h1 id="坑爹"><a href="#坑爹" class="headerlink" title="坑爹"></a>坑爹</h1><p>当你尝试这么写的话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.video &#123;</span><br><span class="line">        width: 500px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        background-color: #bbc13d;</span><br><span class="line">        margin: 50px auto;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">.video video &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">        height: 100%;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
 <p>貌似老板或者客户会不满意，我明明让你铺满全屏，你为啥给我来个居中？</p>
 <h2 id="一个属性帮你搞定"><a href="#一个属性帮你搞定" class="headerlink" title="一个属性帮你搞定"></a>一个属性帮你搞定</h2><p>来，试试把这个属性<code>object-fit: fill;</code>加到你可爱的<code>video</code>标签上去，你就能得到全屏的video了。不要用什么js计算div宽高了，是不是刺激？<br>如图2：<br><img src="http://oughko11e.bkt.clouddn.com/demo_video_full.png" alt="图二"></p>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>图3：<br><img src="http://oughko11e.bkt.clouddn.com/can_i_use.png" alt="图三"><br>噗~，万恶的ie！不过如果不怎么考虑ie的话，可以尝试一下使用这个简单但又强大的属性哦~</p>
+<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>图3：<br><img src="http://oughko11e.bkt.clouddn.com/can_i_use.png" alt="图三"><br>噗<del>，万恶的ie！不过如果不怎么考虑ie的话，可以尝试一下使用这个简单但又强大的属性哦</del></p>
 
       
     </div>

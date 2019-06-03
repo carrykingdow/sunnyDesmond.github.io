@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JED&#39;S BLOG">
 <meta property="og:description" content="问题用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如ul&amp;gt;li+span不能生成&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.565Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vscode中使用tab emmet展开失效">
 <meta name="twitter:description" content="问题用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如ul&amp;gt;li+span不能生成&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/">
@@ -330,7 +330,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -387,9 +387,14 @@
 
       
         <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>用过vscode的同学都知道，这个文本编辑器异常强大。它提供了很多常用的插件，免除了在sublime中安装一堆插件的烦恼。尤其它自带的emmet，那是相当顺手。但是如果装了多了插件的话，有可能会把自带的emmet快捷键给冲突。造成tab形如<code>ul&gt;li+span</code>不能生成<code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;span&gt;&lt;/span&gt;&lt;/ul&gt;</code>这种尴尬的问题。</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>其实问题也是很好解决，只要按<code>ctrl+p</code>呼出控制器，然后输入<code>keybindings.json</code>按回车。它自动会跳转到<code>keybindings.json</code>页面，然后新增<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"key"</span>: <span class="string">"tab"</span>,</span><br><span class="line">  <span class="string">"command"</span>: <span class="string">"-acceptSelectedSuggestion"</span>,</span><br><span class="line">  <span class="string">"when"</span>: <span class="string">"config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>其实问题也是很好解决，只要按<code>ctrl+p</code>呼出控制器，然后输入<code>keybindings.json</code>按回车。它自动会跳转到<code>keybindings.json</code>页面，然后新增</p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"key"</span>: <span class="string">"tab"</span>,</span><br><span class="line">  <span class="string">"command"</span>: <span class="string">"-acceptSelectedSuggestion"</span>,</span><br><span class="line">  <span class="string">"when"</span>: <span class="string">"config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>就可以解决如上问题。P.S(如果已经存在tab，那就直接把command和when替换即可)。</p>
-<p>如果想要键入<code>ul&gt;li+span</code>，让它后面自带提示的话，也非常简单，只要把<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">"key"</span>: <span class="string">"tab"</span>,                  </span><br><span class="line">  <span class="string">"command"</span>: <span class="string">"editor.emmet.action.expandAbbreviation"</span>,</span><br><span class="line">  <span class="string">"when"</span>: <span class="string">"config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果想要键入<code>ul&gt;li+span</code>，让它后面自带提示的话，也非常简单，只要把</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">"key"</span>: <span class="string">"tab"</span>,                  </span><br><span class="line">  <span class="string">"command"</span>: <span class="string">"editor.emmet.action.expandAbbreviation"</span>,</span><br><span class="line">  <span class="string">"when"</span>: <span class="string">"config.emmet.triggerExpansionOnTab &amp;&amp; editorTextFocus &amp;&amp; !editorHasMultipleSelections &amp;&amp; !editorHasSelection &amp;&amp; !editorReadonly &amp;&amp; !editorTabMovesFocus"</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这个替换就行了。</p>
 
       

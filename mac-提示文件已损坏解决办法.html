@@ -88,7 +88,7 @@
 <meta property="og:description" content="imac风扇狂转解决方法公司的13年imac最近好像是疯了，稍微打开几个编辑器，浏览器啥的，风扇就狂转，一看cpu占用也不高啊。风扇出风口的风也是冷的。百度后，发现电脑时间长了，需要重启smc来解决一下。亲测有用，解决办法：  关机 同时按住 Shift, Control, Option以及电源键 同时按住 大概十秒钟吧，然后电脑就自动开机。。貌似就好了。。。（没有网上说的，松开键盘，继续按住电源">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/WX20180726-112736.png">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.564Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.688Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac提示文件已损坏解决办法-不一定有效">
 <meta name="twitter:description" content="imac风扇狂转解决方法公司的13年imac最近好像是疯了，稍微打开几个编辑器，浏览器啥的，风扇就狂转，一看cpu占用也不高啊。风扇出风口的风也是冷的。百度后，发现电脑时间长了，需要重启smc来解决一下。亲测有用，解决办法：  关机 同时按住 Shift, Control, Option以及电源键 同时按住 大概十秒钟吧，然后电脑就自动开机。。貌似就好了。。。（没有网上说的，松开键盘，继续按住电源">
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -396,7 +396,9 @@
 <li>如果失败，可以重复几次</li>
 </ol>
 <a id="more"></a>
-<h2 id="mac-提示文件已经损坏或者不能安装不明开发者软件"><a href="#mac-提示文件已经损坏或者不能安装不明开发者软件" class="headerlink" title="mac 提示文件已经损坏或者不能安装不明开发者软件"></a>mac 提示文件已经损坏或者不能安装不明开发者软件</h2><p>最近下了一个cornerstone，但是下载的时候老是提示文件已损坏。后来才发现，是由于没有在系统隐私中加入<code>允许任何来源</code>的操作。一开始以为只有提示<code>不能安装不明开发者软件</code><br>才需要在隐私中添加这个选项。<br>遇到文件损坏的提示，不要讲文件删除。打开<code>终端</code>,然后输入<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl -–master-disable</span><br></pre></td></tr></table></figure></p>
+<h2 id="mac-提示文件已经损坏或者不能安装不明开发者软件"><a href="#mac-提示文件已经损坏或者不能安装不明开发者软件" class="headerlink" title="mac 提示文件已经损坏或者不能安装不明开发者软件"></a>mac 提示文件已经损坏或者不能安装不明开发者软件</h2><p>最近下了一个cornerstone，但是下载的时候老是提示文件已损坏。后来才发现，是由于没有在系统隐私中加入<code>允许任何来源</code>的操作。一开始以为只有提示<code>不能安装不明开发者软件</code><br>才需要在隐私中添加这个选项。<br>遇到文件损坏的提示，不要讲文件删除。打开<code>终端</code>,然后输入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl -–master-disable</span><br></pre></td></tr></table></figure>
+
 <p>master 前面有两个<code>-</code> 然后最好不要复制粘贴，用手敲，不然可能会有空格啥的，，<br>之后系统会提示输入密码，输入后即可。最后重启<code>系统偏好设置</code> 就会发现有这个了选项了。<br><img src="http://oughko11e.bkt.clouddn.com/WX20180726-112736.png" alt="pic"><br>最后，应该可以愉快地打开之前的app了 😁</p>
 
       

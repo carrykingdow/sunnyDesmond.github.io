@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/1.png">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/2.png">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/3.png">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.564Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue mock小记">
 <meta name="twitter:description" content="关于mockjsmockjs真的是一款数据生成神器，可以帮助我们生成一堆我们想要的数据。在前后端分离的工作模式下，前端的苦逼们再也无需等待后台大哥们的接口了。想要数据？自己mock一下就搞定。 用法官网对于mockjs，只是简单介绍了一下它的安装方式，以及引入方式。对于实际在项目中的使用，则直接抛了几个demo，感觉让人很扫兴。最近在一个vue项目中需要用到mock，在网上找了很多文章，感觉都非常">
@@ -334,7 +334,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -391,15 +391,18 @@
 
       
         <h2 id="关于mockjs"><a href="#关于mockjs" class="headerlink" title="关于mockjs"></a>关于mockjs</h2><p>mockjs真的是一款数据生成神器，可以帮助我们生成一堆我们想要的数据。在前后端分离的工作模式下，前端的苦逼们再也无需等待后台大哥们的接口了。想要数据？自己mock一下就搞定。</p>
-<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>官网对于mockjs，只是简单介绍了一下它的安装方式，以及引入方式。对于实际在项目中的使用，则直接抛了几个demo，感觉让人很扫兴。<img src="http://oughko11e.bkt.clouddn.com/1.png" alt="呵呵"><br>最近在一个vue项目中需要用到mock，在网上找了很多文章，感觉都非常专业的样子，然而看完还是一脸懵逼。。不能换个写个简单的，让人看得懂的说话么。。好吧，没办法，只能自己摸索，居然还成功了。。<img src="http://oughko11e.bkt.clouddn.com/2.png" alt="呵呵"> 这边做一个小记，防止自己忘记。。<br><a id="more"></a></p>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>官网对于mockjs，只是简单介绍了一下它的安装方式，以及引入方式。对于实际在项目中的使用，则直接抛了几个demo，感觉让人很扫兴。<img src="http://oughko11e.bkt.clouddn.com/1.png" alt="呵呵"><br>最近在一个vue项目中需要用到mock，在网上找了很多文章，感觉都非常专业的样子，然而看完还是一脸懵逼。。不能换个写个简单的，让人看得懂的说话么。。好吧，没办法，只能自己摸索，居然还成功了。。<img src="http://oughko11e.bkt.clouddn.com/2.png" alt="呵呵"> 这边做一个小记，防止自己忘记。。</p>
+<a id="more"></a>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>关于安装，<a href="https://github.com/nuysoft/Mock/wiki/Getting-Started" target="_blank" rel="noopener">mock</a>这个已经写得很详细了。直接cd到你的项目中，运行<code>npm install mockjs --save-dev</code> 回车，然后balabla安装。。如果下载很慢，可以换成淘宝镜像源<code>cnpm install mockjs --save-dev</code> 这个来安装。</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
-<li>首先，在项目中新建一个文件，暂且称为<code>mock.js</code>,我这边是在<code>src/plugins/</code>新建的。你们可以随便新建在哪，建完之后确保你能找得到它。。</li>
+<li><p>首先，在项目中新建一个文件，暂且称为<code>mock.js</code>,我这边是在<code>src/plugins/</code>新建的。你们可以随便新建在哪，建完之后确保你能找得到它。。</p>
+</li>
 <li><p>然后，把一些配置写进刚刚新建的<code>mock.js</code>,它的api用法我这边就不写，想偷懒？那可不行，自己慢慢看<a href="http://mockjs.com/examples.html" target="_blank" rel="noopener">文档</a>去！我这边贴一下我的简单的配置。我这边生成的是一堆外卖数据</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入mockjs</span></span><br><span class="line"><span class="keyword">import</span> Mock <span class="keyword">from</span> <span class="string">'mockjs'</span>;</span><br><span class="line"><span class="keyword">const</span> data = Mock.mock(&#123;</span><br><span class="line">  <span class="comment">// 属性 list 的值是一个数组，其中含有 1 到 10 个元素</span></span><br><span class="line">  <span class="string">'foods|10-50'</span>: [&#123;</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">"@ctitle(2,10)"</span>,</span><br><span class="line">    <span class="string">"img"</span>: <span class="string">"@image('600x600',#b7ef7c)"</span>,</span><br><span class="line">    <span class="string">"brief"</span>: <span class="string">"@csentence(1,50)"</span>,</span><br><span class="line">    <span class="string">"price|0-20.0-2"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">"num"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"minusFlag"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">"time"</span>: <span class="string">"@time"</span>,</span><br><span class="line">    <span class="string">"peisongfei|0-100.0-2"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">"limit|0-50"</span>: <span class="number">1</span></span><br><span class="line">  &#125;],</span><br><span class="line">  <span class="string">"sales|10-50"</span>: [&#123;</span><br><span class="line">    <span class="comment">// 属性 id 是一个自增数，起始值为 1，每次增 1</span></span><br><span class="line">    <span class="string">'name'</span>: <span class="string">"@ctitle(2,10)"</span>,</span><br><span class="line">    <span class="string">"img"</span>: <span class="string">"@image('600x600',#b7ef7c)"</span>,</span><br><span class="line">    <span class="string">"brief"</span>: <span class="string">"@csentence(1,50)"</span>,</span><br><span class="line">    <span class="string">"price|0-100.0-2"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">"num"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"minusFlag"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">"time"</span>: <span class="string">"@time"</span>,</span><br><span class="line">    <span class="string">"peisongfei|0-100.0-2"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">"limit|0-100"</span>: <span class="number">1</span></span><br><span class="line">  &#125;]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>接下来，在你需要用到的mock数据的组件页面中，这样写</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mockdata <span class="keyword">from</span> <span class="string">"@/plugins/mock"</span>;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <p>这个路径是你刚刚新建<code>mock.js</code>这个文件的路径，文件后面的<code>.js</code>可以省去。</p>

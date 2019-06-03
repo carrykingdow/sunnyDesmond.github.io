@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="问题最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示1Error in nextTick: &quot;InvalidCharacterError: Failed to execute &apos;setAttribute&apos; on &apos;Element&apos;: &apos;`&apos; is not a valid attribute name.&quot; 如图：擦咧，从来没遇到过啊 ￣□￣｜｜Google一番后，网友表示">
+<meta name="description" content="问题最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示  1Error in nextTick: &quot;InvalidCharacterError: Failed to execute &apos;setAttribute&apos; on &apos;Element&apos;: &apos;`&apos; is not a valid attribute name.&quot;  如图：擦咧，从来没遇到过啊 ￣□￣｜｜Google一番后，网">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue 报错-- xxx is not a valid attribute name">
 <meta property="og:url" content="https://sunnydesmond.github.io/vue-报错-xxx-is-not-a-valid-attribute-name.html">
 <meta property="og:site_name" content="JED&#39;S BLOG">
-<meta property="og:description" content="问题最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示1Error in nextTick: &quot;InvalidCharacterError: Failed to execute &apos;setAttribute&apos; on &apos;Element&apos;: &apos;`&apos; is not a valid attribute name.&quot; 如图：擦咧，从来没遇到过啊 ￣□￣｜｜Google一番后，网友表示">
+<meta property="og:description" content="问题最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示  1Error in nextTick: &quot;InvalidCharacterError: Failed to execute &apos;setAttribute&apos; on &apos;Element&apos;: &apos;`&apos; is not a valid attribute name.&quot;  如图：擦咧，从来没遇到过啊 ￣□￣｜｜Google一番后，网">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/wx-1.png">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.566Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.691Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue 报错-- xxx is not a valid attribute name">
-<meta name="twitter:description" content="问题最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示1Error in nextTick: &quot;InvalidCharacterError: Failed to execute &apos;setAttribute&apos; on &apos;Element&apos;: &apos;`&apos; is not a valid attribute name.&quot; 如图：擦咧，从来没遇到过啊 ￣□￣｜｜Google一番后，网友表示">
+<meta name="twitter:description" content="问题最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示  1Error in nextTick: &quot;InvalidCharacterError: Failed to execute &apos;setAttribute&apos; on &apos;Element&apos;: &apos;`&apos; is not a valid attribute name.&quot;  如图：擦咧，从来没遇到过啊 ￣□￣｜｜Google一番后，网">
 <meta name="twitter:image" content="http://oughko11e.bkt.clouddn.com/wx-1.png">
 
 
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -388,7 +388,9 @@
       
 
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Error</span> <span class="keyword">in</span> nextTick: <span class="string">"InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': '`' is not a valid attribute name."</span></span><br></pre></td></tr></table></figure></p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>最近在修改一个项目的bug的时候发现一个神奇的bug，点击一个按钮的时候提示 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Error</span> <span class="keyword">in</span> nextTick: <span class="string">"InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': '`' is not a valid attribute name."</span></span><br></pre></td></tr></table></figure>
+
 <p>如图：<br><img src="http://oughko11e.bkt.clouddn.com/wx-1.png" alt="bug"><br>擦咧，从来没遇到过啊 ￣□￣｜｜<br>Google一番后，网友表示只有一个类似的错误，那就是 <code>Failed to execute &#39;setAttribute&#39; on &#39;Element&#39;: &#39;]&#39; is not a valid attribute name. angular 4</code> 人家还是 ag4的项目，可是我的是<code>vue</code>啊。。。而且之前都没有问题啊。。</p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>后来一步步检查，从<code>js</code>传参，赋值开始，一个个检查过去没有问题。。。然后检查<code>html</code>发现了最低级的错误。。<br>😓好尴尬，不知道在什么时候多敲了一个 `  。<br>为方便以后快速定位问题，特此留文。。。希望以后不要出现这种低级错误了。。-_-||</p>
 

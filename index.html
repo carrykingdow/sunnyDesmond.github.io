@@ -331,7 +331,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:22:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -463,7 +463,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -528,11 +528,19 @@
             <h2 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h2><p>前段时间太忙了，然后又太懒，导致好久没有更新，实在是惭愧啊。。。</p>
 <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>最近做了一个小程序中的一个需求。大概是这样的：需要做一个全局弹窗。然后在小程序运行期间只打开一次，只有关闭微信的时候再打开小程序才弹出来这个弹窗，否则都只展示一次，哪怕是点小程序右上角将小程序隐藏进后台，也展示一次。<br>本来把这个需求想的有些麻烦，一开始想给这个全局弹窗弄个变量，存到<code>localStorge</code>里面，然后每次打开app的时候，读取这个变量。卸载app后清除这个变量。但是后来发现，小程序的<code>onUnload</code>和<code>onHide</code>都不能监听到app的卸载。<br>最后在小伙伴的提示下，发现只要给这个变量赋值到<code>aap.js</code>中就行了，然后运行完这个弹窗就将这个全局变量置为<code>false</code>即可。。。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.js</span><br><span class="line">·········</span><br><span class="line">onLaunch: function (options) &#123;</span><br><span class="line">    this.globalData.needShowLaunchAd = true;</span><br><span class="line">  &#125;,</span><br><span class="line">·······</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const App = getApp();</span><br><span class="line">········</span><br><span class="line"> if (App.globalData.needShowLaunchAd)&#123;</span><br><span class="line">      App.globalData.needShowLaunchAd=false;</span><br><span class="line">    &#125;</span><br><span class="line">·······</span><br></pre></td></tr></table></figure>
+
 <h2 id="官方概念"><a href="#官方概念" class="headerlink" title="官方概念"></a>官方概念</h2><blockquote>
 <blockquote>
 <blockquote>
 <p>###小程序启动<br>小程序启动会有两种情况，一种是「冷启动」，一种是「热启动」。<br>热启动：假如用户已经打开过某小程序，然后在一定时间内再次打开该小程序，此时无需重新启动，只需将后台态的小程序切换到前台，这个过程就是热启动；<br>冷启动：用户首次打开或小程序被微信主动销毁后再次打开的情况，此时小程序需要重新加载启动，即冷启动。<br>小程序没有重启的概念。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
 <p>##小程序销毁<br>需要注意的是：只有当小程序进入后台一定时间，或者系统资源占用过高，才会被真正的销毁。<br>当小程序进入后台，客户端会维持一段时间的运行状态，超过一定时间后（目前是5分钟）小程序会被微信主动销毁。<br>当小程序占用系统资源过高，可能会被系统销毁或被微信客户端主动回收。<br>在 iOS 上，当微信客户端在一定时间间隔内（目前是 5 秒）连续收到两次及以上系统内存告警时，会主动进行小程序的销毁，并提示用户 「该小程序可能导致微信响应变慢被终止」。<br>建议小程序在必要时使用 wx.onMemoryWarning 监听内存告警事件，进行必要的内存清理。</p>
 </blockquote>
 </blockquote>
@@ -633,7 +641,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -690,7 +698,7 @@
 
       
         
-          <h2 id="做一个时间选择器"><a href="#做一个时间选择器" class="headerlink" title="做一个时间选择器"></a>做一个时间选择器</h2><p>最近需要做一个小程序项目的时候，遇到一个需要将时间选择器暴露在页面的需求。<br>如图：<br><img src="../img/2018-0104-1116.png" alt="需求"><br>
+          <h2 id="做一个时间选择器"><a href="#做一个时间选择器" class="headerlink" title="做一个时间选择器"></a>做一个时间选择器</h2><p>最近需要做一个小程序项目的时候，遇到一个需要将时间选择器暴露在页面的需求。<br>如图：<br><img src="../img/2018-0104-1116.png" alt="需求"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/基于pick-view时间组件.html#more" rel="contents">
@@ -700,7 +708,7 @@
           <!--/noindex-->
         
       
-    </p></div>
+    </div>
     
     
     
@@ -791,7 +799,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -848,7 +856,7 @@
 
       
         
-          <h2 id="呵，生活。"><a href="#呵，生活。" class="headerlink" title="呵，生活。"></a>呵，生活。</h2><p>每个人都逃不过【真香定律】。以前最讨厌的年终总结，居然主动写在了自己的博客里。而且还觉得挺好。。。<br>2018年，于我来说是一个喜忧参半的一年。年初五，完成了自己的终身大事。去年5月购置的期房也于8月拿到了手。从一个家公司跳槽到另一家公司，不一样的文化，不一样的环境，新的工作感受。至亲的离开，新生命的到来。这一年，悲喜交加，跌宕起伏，感觉一下子成长了很多。<br>生活也是就是这样。你永远不知道下一秒会是什么，你也无法揣测下一秒会发生什么。有时候自信满满，意气风发，感觉可以操纵全世界。下一秒可能会被现实迎头棒喝，只能默默的躲在角落，抚摸伤口，暗自神伤。生活真的就是这样。<br>
+          <h2 id="呵，生活。"><a href="#呵，生活。" class="headerlink" title="呵，生活。"></a>呵，生活。</h2><p>每个人都逃不过【真香定律】。以前最讨厌的年终总结，居然主动写在了自己的博客里。而且还觉得挺好。。。<br>2018年，于我来说是一个喜忧参半的一年。年初五，完成了自己的终身大事。去年5月购置的期房也于8月拿到了手。从一个家公司跳槽到另一家公司，不一样的文化，不一样的环境，新的工作感受。至亲的离开，新生命的到来。这一年，悲喜交加，跌宕起伏，感觉一下子成长了很多。<br>生活也是就是这样。你永远不知道下一秒会是什么，你也无法揣测下一秒会发生什么。有时候自信满满，意气风发，感觉可以操纵全世界。下一秒可能会被现实迎头棒喝，只能默默的躲在角落，抚摸伤口，暗自神伤。生活真的就是这样。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/即将再见的2018.html#more" rel="contents">
@@ -858,7 +866,7 @@
           <!--/noindex-->
         
       
-    </p></div>
+    </div>
     
     
     
@@ -949,7 +957,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -1008,7 +1016,9 @@
         
           
             <h2 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&apos;title&apos;&gt;快来设置吧&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">.title &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  font-size: 32px;</span><br><span class="line">  color: #fff;</span><br><span class="line">  height: 45px;</span><br><span class="line">  line-height: 45px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">.title:before &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  position: absolute;</span><br><span class="line">  width: 28px;</span><br><span class="line">  height: 2px;</span><br><span class="line">  top: 50%;</span><br><span class="line">  background-color: #fff;</span><br><span class="line">  left: 32%;</span><br><span class="line">&#125;</span><br><span class="line">.title:after &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  position: absolute;</span><br><span class="line">  width: 28px;</span><br><span class="line">  height: 2px;</span><br><span class="line">  top: 50%;</span><br><span class="line">  background-color: #fff;</span><br><span class="line">  right: 32%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://img.jammyfm.com/media/jedmm/WX20181225-105919.png" alt="效果图"></p>
 
           
@@ -1105,7 +1115,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -1166,7 +1176,7 @@
 
       
         
-          <h2 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h2><p>最近做一个小程序项目的时候遇到了保存图片到手机相册的一个功能。就像这样：<br><img src="../img/WX20181205-085624@2x.png" alt="需求图"><br>需要通过点击【保存按钮】进行授权保存到本地<br>
+          <h2 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h2><p>最近做一个小程序项目的时候遇到了保存图片到手机相册的一个功能。就像这样：<br><img src="../img/WX20181205-085624@2x.png" alt="需求图"><br>需要通过点击【保存按钮】进行授权保存到本地</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/小程序保存图片到本地授权问题.html#more" rel="contents">
@@ -1176,7 +1186,7 @@
           <!--/noindex-->
         
       
-    </p></div>
+    </div>
     
     
     
@@ -1267,7 +1277,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -1328,7 +1338,8 @@
 
       
         
-          <h2 id="小程序分享"><a href="#小程序分享" class="headerlink" title="小程序分享"></a>小程序分享</h2><p>微信小程序分享主要是使用自带的<code>onShareAppMessage</code>方法调起分享组件。<br>主要写法就是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">onShareAppMessage:function(res)&#123;</span><br><span class="line">    if(res.from == &apos;button&apos;)&#123;</span><br><span class="line">        //按钮授权 调用share</span><br><span class="line">    &#125;</span><br><span class="line">     return &#123;</span><br><span class="line">      title: shareTitle,</span><br><span class="line">      path: shareUrl,</span><br><span class="line">      imageUrl: shareImageUrl</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <h2 id="小程序分享"><a href="#小程序分享" class="headerlink" title="小程序分享"></a>小程序分享</h2><p>微信小程序分享主要是使用自带的<code>onShareAppMessage</code>方法调起分享组件。<br>主要写法就是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">onShareAppMessage:function(res)&#123;</span><br><span class="line">    if(res.from == &apos;button&apos;)&#123;</span><br><span class="line">        //按钮授权 调用share</span><br><span class="line">    &#125;</span><br><span class="line">     return &#123;</span><br><span class="line">      title: shareTitle,</span><br><span class="line">      path: shareUrl,</span><br><span class="line">      imageUrl: shareImageUrl</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/小程序分享参数问题.html#more" rel="contents">
@@ -1429,7 +1440,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -1588,7 +1599,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -1745,7 +1756,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             

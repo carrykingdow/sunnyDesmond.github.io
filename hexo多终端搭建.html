@@ -88,7 +88,7 @@
 <meta property="og:description" content="hexo用过hexo搭建博客的同学都知道，hexo是一个非常轻量高效的博客搭建工具。配合强大的makrdown文件，分分钟编译出漂亮牛逼的页面，瞬间发布，省时省心。 一些问题然而它也并不是完美的。比如我在公司电脑上，辛辛苦苦搭建了博客，写入文章且正常发布了。但是回到家，突然又想写一篇文章。这时候就显得非常蛋疼。如果重新安装的话，之前写的好多配置就没有了。。。在网上找了好多文章，有说把整个项目拷贝到">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-12%20%E4%B8%8B%E5%8D%8811.05.09.png">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.563Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo多终端搭建">
 <meta name="twitter:description" content="hexo用过hexo搭建博客的同学都知道，hexo是一个非常轻量高效的博客搭建工具。配合强大的makrdown文件，分分钟编译出漂亮牛逼的页面，瞬间发布，省时省心。 一些问题然而它也并不是完美的。比如我在公司电脑上，辛辛苦苦搭建了博客，写入文章且正常发布了。但是回到家，突然又想写一篇文章。这时候就显得非常蛋疼。如果重新安装的话，之前写的好多配置就没有了。。。在网上找了好多文章，有说把整个项目拷贝到">
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -389,9 +389,11 @@
 
       
         <h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p>用过hexo搭建博客的同学都知道，hexo是一个非常轻量高效的博客搭建工具。配合强大的makrdown文件，分分钟编译出漂亮牛逼的页面，瞬间发布，省时省心。</p>
-<h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>然而它也并不是完美的。比如我在公司电脑上，辛辛苦苦搭建了博客，写入文章且正常发布了。但是回到家，突然又想写一篇文章。这时候就显得非常蛋疼。如果重新安装的话，之前写的好多配置就没有了。。。在网上找了好多文章，有说把整个项目拷贝到百度网盘的（好吧，这个确实比较low，但也不失为很简单粗暴的方法）这个带来的缺点就是，你每次更新新的文件之后你必须要重新打包你的文件，然后上传到你的网盘空间。。。在这个GitHub漫天飞的年代，如果可能，我们当然会选择使用github来作为我们的仓库<br><a id="more"></a></p>
+<h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>然而它也并不是完美的。比如我在公司电脑上，辛辛苦苦搭建了博客，写入文章且正常发布了。但是回到家，突然又想写一篇文章。这时候就显得非常蛋疼。如果重新安装的话，之前写的好多配置就没有了。。。在网上找了好多文章，有说把整个项目拷贝到百度网盘的（好吧，这个确实比较low，但也不失为很简单粗暴的方法）这个带来的缺点就是，你每次更新新的文件之后你必须要重新打包你的文件，然后上传到你的网盘空间。。。在这个GitHub漫天飞的年代，如果可能，我们当然会选择使用github来作为我们的仓库</p>
+<a id="more"></a>
 <h2 id="使用github"><a href="#使用github" class="headerlink" title="使用github"></a>使用github</h2><p>我这边采用的办法我感觉很简单。只需要将你的hexo项目作为两部分，分别放入github仓库中即可。<br>搭建过hexo博客的都知道，我们一开始就会新建一个仓库，这个仓库用来存放hexo生成的静态页面。这个地址你可以在根目录下的<code>_config.yml</code>中的<code>repository</code>找到。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: https:<span class="comment">//github.com/SunnyDesmond/sunnyDesmond.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
 <p>然后只要在这个基础上新建一个新的分支，我这边分支名字叫做<code>hexo</code>,当然了你可以取任意你喜欢的名字。<br>这个仓库中我们就用来存放hexo的项目配置文件，方便我们在不同的终端中下载安装我们的博客。<br>一般情况下我们只要上传这么多文件夹到 <code>hexo</code>即可，如图：<br><img src="http://oughko11e.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-12%20%E4%B8%8B%E5%8D%8811.05.09.png" alt="配置"></p>
 <ol>
 <li><code>scaffolds/</code> <code>source/</code>都在我们博客项目的根目录下文件夹</li>
@@ -413,8 +415,9 @@
 <li>运行 <code>hexo new &quot;xx&quot;</code>, <code>hexo clean</code>,<code>hexo g</code>,<code>hexo s</code>,在浏览器中打开你的<code>localhost:4000</code>如果成功看到页面。。那么恭喜你成功了。。。如果没有，请好好检查一下，然后发布文章<code>hexo d</code>即可(如果是mac的话，记得加上<code>sudo</code>,不然可能出现这种情况</li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FATAL Something<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span></span><br><span class="line"><span class="string">Error: EACCES: permission denied, unlink '</span>/Users/desmond/work/sunnyDesmond.github.io/.deploy_git/archives/index.html<span class="string">'</span></span><br></pre></td></tr></table></figure>
+
 <p>)</p>
-<ol>
+<ol start="10">
 <li>最后记得每次发布文章之后，将项目push到新的仓库哦～<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2>感谢知乎大神给出的一些方法建议，如果有需要，小伙伴们可以看一下<a href="https://www.zhihu.com/question/21193762" target="_blank" rel="noopener">这个帖子</a></li>
 </ol>
 

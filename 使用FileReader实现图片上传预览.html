@@ -88,7 +88,7 @@
 <meta property="og:description" content="需求web开发中经常会出现需要点击按钮然后上传图片这样的功能。一般我们会用第三方插件来实现。但其实如果需求不是很复杂的话，我们使用H5的FileReader就可以满足开发需求。 效果图">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/upload.gif">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.567Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用FileReader实现图片上传预览">
 <meta name="twitter:description" content="需求web开发中经常会出现需要点击按钮然后上传图片这样的功能。一般我们会用第三方插件来实现。但其实如果需求不是很复杂的话，我们使用H5的FileReader就可以满足开发需求。 效果图">
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -391,8 +391,10 @@
         <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>web开发中经常会出现需要点击按钮然后上传图片这样的功能。一般我们会用第三方插件来实现。但其实如果需求不是很复杂的话，我们使用H5的FileReader就可以满足开发需求。</p>
 <h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://oughko11e.bkt.clouddn.com/upload.gif" alt="fileupload gif"></p>
 <a id="more"></a>
+
 <h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><ul>
 <li>html<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"works-wrap"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"figure-box"</span> <span class="attr">id</span>=<span class="string">"figure_box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"add-btn"</span>&gt;</span>  </span><br><span class="line">          <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"imgUploadBtn"</span> /&gt;</span>  </span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>添加作品<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <p><em>啰嗦一下</em> 我这边用css将input[type=file] 设置成了opticy:0; 这样可以看起来更像原生的上传。</p>

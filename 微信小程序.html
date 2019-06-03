@@ -88,7 +88,7 @@
 <meta property="og:description" content="微信小程序">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oughko11e.bkt.clouddn.com/pull.gif">
-<meta property="og:updated_time" content="2019-06-03T03:14:03.573Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:51.701Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序">
 <meta name="twitter:description" content="微信小程序">
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T17:47:51+08:00">
                 2019-06-03
               </time>
             
@@ -393,8 +393,11 @@
 
       
         <p>从微信小程序发布以来就一直关注着。也玩了几个小程序的demo，感觉很流畅，用着很舒服。最近趁着有点时间，打算自己写个小程序练练手，会把踩过的一些坑留在这边。。。</p>
-<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p>小程序用到了和目前很火的前端框架一样的双向数据绑定。它集成很多自己带的api，比如它可以很简单获取用户信息，获取设备信息，指南针等等，感觉很友好。具体的就不描述了，<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/" target="_blank" rel="noopener">文档</a>上面都有。<br><a id="more"></a></p>
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>先吐槽一下文档。它把事件直接归纳到了视图层&gt;WXML里面，但是在api文档中却没有,api真的就是完完全全的api。。害的我在API中找了半天。。还以为小程序没有官方指定的绑定事件呢。(好吧，是我太年轻了。) 言归正传。。<br>小程序自带了一个叫做<code>bindtap</code>( <code>tap</code>的<code>t</code>是小写~),然后跟上你需要绑定的事件名称即可。<br>如官方例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;view  bindtap=<span class="string">"tapName"</span>&gt; Click me! <span class="xml"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span></span><br><span class="line">    </span><br><span class="line">Page(&#123;</span><br><span class="line">  tapName: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p>小程序用到了和目前很火的前端框架一样的双向数据绑定。它集成很多自己带的api，比如它可以很简单获取用户信息，获取设备信息，指南针等等，感觉很友好。具体的就不描述了，<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/" target="_blank" rel="noopener">文档</a>上面都有。</p>
+<a id="more"></a>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>先吐槽一下文档。它把事件直接归纳到了视图层&gt;WXML里面，但是在api文档中却没有,api真的就是完完全全的api。。害的我在API中找了半天。。还以为小程序没有官方指定的绑定事件呢。(好吧，是我太年轻了。) 言归正传。。<br>小程序自带了一个叫做<code>bindtap</code>( <code>tap</code>的<code>t</code>是小写~),然后跟上你需要绑定的事件名称即可。<br>如官方例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;view  bindtap=<span class="string">"tapName"</span>&gt; Click me! <span class="xml"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span></span><br><span class="line">    </span><br><span class="line">Page(&#123;</span><br><span class="line">  tapName: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <p>很简单。。</p>
 <h2 id="视图容器-view"><a href="#视图容器-view" class="headerlink" title="视图容器 view"></a>视图容器 view</h2><p>view 是小程序中的视图容器，个人感觉类似于html的div吧。在一些情况下会有一些问题。那就是拉动时候貌似有点<code>异常</code>。他的效果类似于ios自带的弹性滑动效果，但是在一些情况下，他的滑动总感觉怪怪的~如图：<br><img src="http://oughko11e.bkt.clouddn.com/pull.gif" alt="pull"><br>如果发现是这样的。。那么你需要检查一下你的项目配置了。找到项目的app.json。然后在<code>window</code>对象中找到 <code>enablePullDownRefresh</code>把它设置成fasle，或者直接删除就行了。。。</p>
 
