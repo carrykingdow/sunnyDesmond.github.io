@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2Ftest.html</url>
-    <content type="text"><![CDATA[test1211]]></content>
+    <title><![CDATA[解决mac版本sourceTree卡顿问题]]></title>
+    <url>%2F%E8%A7%A3%E5%86%B3mac%E7%89%88%E6%9C%ACsourceTree%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html</url>
+    <content type="text"><![CDATA[mac下的SourceTree，蛮好用的，但是最近发现，打开超级卡，切换分支的时候跟食s了一样，最后发现这样解决其实就好多了。 话不多说，直接上图。 亲测有效，如果有更好的方法，欢迎留言沟通~]]></content>
+      <categories>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>开发工具</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[微信小程序设置全局弹窗]]></title>
