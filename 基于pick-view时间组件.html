@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="微信小程序,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="做一个时间选择器最近需要做一个小程序项目的时候，遇到一个需要将时间选择器暴露在页面的需求。如图：">
+<meta name="keywords" content="微信小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于pick-view时间组件">
+<meta property="og:url" content="https://sunnydesmond.github.io/基于pick-view时间组件.html">
+<meta property="og:site_name" content="JED&#39;S BLOG">
+<meta property="og:description" content="做一个时间选择器最近需要做一个小程序项目的时候，遇到一个需要将时间选择器暴露在页面的需求。如图：">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://sunnydesmond.github.io/img/2018-0104-1116.png">
+<meta property="og:updated_time" content="2019-06-03T03:14:03.571Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于pick-view时间组件">
+<meta name="twitter:description" content="做一个时间选择器最近需要做一个小程序项目的时候，遇到一个需要将时间选择器暴露在页面的需求。如图：">
+<meta name="twitter:image" content="https://sunnydesmond.github.io/img/2018-0104-1116.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sunnydesmond.github.io/基于pick-view时间组件.html">
+
+
+
+
+
+  <title>基于pick-view时间组件 | JED'S BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JED'S BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">一些工作生活记录</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sunnydesmond.github.io/基于pick-view时间组件.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jed_shi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JED'S BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">基于pick-view时间组件</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-04T11:07:11+08:00">
+                2019-01-04
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-03T11:14:03+08:00">
+                2019-06-03
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/微信小程序/" itemprop="url" rel="index">
+                    <span itemprop="name">微信小程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="做一个时间选择器"><a href="#做一个时间选择器" class="headerlink" title="做一个时间选择器"></a>做一个时间选择器</h2><p>最近需要做一个小程序项目的时候，遇到一个需要将时间选择器暴露在页面的需求。<br>如图：<br><img src="../img/2018-0104-1116.png" alt="需求"><br><a id="more"></a></p>
+<h2 id="pick-view"><a href="#pick-view" class="headerlink" title="pick view"></a>pick view</h2><p>微信小程序提供了一些非常常见的pick组件，但是直接暴露在页面上的，只有<code>pick view</code>组件。因此这边只能使用这个了。😂</p>
+<h2 id="不上台面的代码片段"><a href="#不上台面的代码片段" class="headerlink" title="不上台面的代码片段"></a>不上台面的代码片段</h2><p>由于项目比较急，没有时间做优化，因此直接开搞。这边贴上代码。🤒<br>😈😈⚠️警告： 目前<code>picker-view</code>不支持给选中的column改变字体颜色，因此无法高亮选中的<code>picker-view-column</code>哪怕设置<code>indicator-style</code>或者给加上<code>indicator-class</code>都不好用！<br>但是可以给<code>indicator-style</code>添加背景色，就像这样 <code>indicator-style=&quot;background:#ff4400;&quot;</code>。😂😂但是。。真的很丑😫😫😫😫</p>
+<h2 id="view-代码"><a href="#view-代码" class="headerlink" title="view 代码"></a>view 代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;picker-view indicator-style=&quot;height: 45px;&quot;  indicator-class=&quot;indicator&quot; bindchange=&quot;bindChange&quot; value=&apos;&#123;&#123;defaultDate&#125;&#125;&apos;&gt;</span><br><span class="line">   &lt;picker-view-column&gt;</span><br><span class="line">     &lt;view class=&apos;year&apos; wx:for=&quot;&#123;&#123;years&#125;&#125;&quot; wx:key=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/view&gt;</span><br><span class="line">   &lt;/picker-view-column&gt;</span><br><span class="line">   &lt;picker-view-column&gt;</span><br><span class="line">     &lt;view class=&apos;month&apos; wx:for=&quot;&#123;&#123;months&#125;&#125;&quot; wx:key=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/view&gt;</span><br><span class="line">   &lt;/picker-view-column&gt;</span><br><span class="line">   &lt;picker-view-column&gt;</span><br><span class="line">     &lt;view class=&apos;day&apos; wx:for=&quot;&#123;&#123;days&#125;&#125;&quot; wx:key=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/view&gt;</span><br><span class="line">   &lt;/picker-view-column&gt;</span><br><span class="line">   &lt;picker-view-column&gt;</span><br><span class="line">     &lt;view class=&apos;hour&apos; wx:for=&quot;&#123;&#123;hours&#125;&#125;&quot; wx:key=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/view&gt;</span><br><span class="line">   &lt;/picker-view-column&gt;</span><br><span class="line">   &lt;picker-view-column&gt;</span><br><span class="line">     &lt;view class=&apos;min&apos; wx:for=&quot;&#123;&#123;mins&#125;&#125;&quot; wx:key=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/view&gt;</span><br><span class="line">   &lt;/picker-view-column&gt;</span><br><span class="line"> &lt;/picker-view&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="公共js代码"><a href="#公共js代码" class="headerlink" title="公共js代码"></a>公共js代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.indexVf = function(arr) &#123;            </span><br><span class="line">  for (var i = 0; i &lt; this.length; i++) &#123;                </span><br><span class="line">    if (this[i] == arr) &#123;                    </span><br><span class="line">      return i;                </span><br><span class="line">    &#125;            </span><br><span class="line">  &#125;        </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let years = []</span><br><span class="line">let months = []</span><br><span class="line">let days = []</span><br><span class="line">let hours = []</span><br><span class="line">let mins = []</span><br><span class="line"></span><br><span class="line">let date = new Date();</span><br><span class="line"></span><br><span class="line">// 格式化数字</span><br><span class="line">function formatNum(val) &#123;</span><br><span class="line">  let formatVal;</span><br><span class="line">  if (val &lt; 10) &#123;</span><br><span class="line">    formatVal = `0$&#123;val&#125;`</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    formatVal = val;</span><br><span class="line">  &#125;</span><br><span class="line">  return formatVal;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 初始化当前时间</span><br><span class="line">function initYear() &#123;</span><br><span class="line">  let date = new Date();</span><br><span class="line">  // 此处清空数组，防止数据污染</span><br><span class="line">  years = [];</span><br><span class="line">  months = [];</span><br><span class="line">  days = [];</span><br><span class="line">  hours = [];</span><br><span class="line">  mins = [];</span><br><span class="line">  for (let i = date.getFullYear(); i &lt;= date.getFullYear() + 5; i++) &#123;</span><br><span class="line">    years.push(i)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  for (let i = date.getMonth() + 1; i &lt;= 12; i++) &#123;</span><br><span class="line">    months.push(formatNum(i));</span><br><span class="line">  &#125;</span><br><span class="line">  // 根据月份 获取当前月的天数</span><br><span class="line">  let countDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();</span><br><span class="line"></span><br><span class="line">  for (let i = date.getDate(); i &lt;= countDays; i++) &#123;</span><br><span class="line">    days.push(formatNum(i));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  for (let i = date.getHours(); i &lt;= 23; i++) &#123;</span><br><span class="line">    hours.push(formatNum(i));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  for (let i = date.getMinutes(); i &lt;= 59; i++) &#123;</span><br><span class="line">    mins.push(formatNum(i))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">// 初始化 所有时间</span><br><span class="line">function initAllYear(yy, mm) &#123;</span><br><span class="line">  // 此处清空数组，防止数据污染</span><br><span class="line">   years = [];</span><br><span class="line">   months = [];</span><br><span class="line">   days = [];</span><br><span class="line">   hours = [];</span><br><span class="line">   mins = [];</span><br><span class="line"></span><br><span class="line">  for (let i = date.getFullYear(); i &lt;= date.getFullYear() + 5; i++) &#123;</span><br><span class="line">    years.push(i)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  for (let i = 1; i &lt;= 12; i++) &#123;</span><br><span class="line">    months.push(formatNum(i));</span><br><span class="line">  &#125;</span><br><span class="line">  // 根据月份 获取当前月的天数</span><br><span class="line">  let countDays = new Date(yy, mm, 0).getDate();</span><br><span class="line"></span><br><span class="line">  for (let i = 1; i &lt;= countDays; i++) &#123;</span><br><span class="line">    days.push(formatNum(i));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  for (let i = 0; i &lt;= 23; i++) &#123;</span><br><span class="line">    hours.push(formatNum(i));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  for (let i = 0; i &lt;= 59; i++) &#123;</span><br><span class="line">    mins.push(formatNum(i))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="页面js"><a href="#页面js" class="headerlink" title="页面js"></a>页面js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br></pre></td><td class="code"><pre><span class="line">page(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">    years,</span><br><span class="line">    year: &quot;&quot;,</span><br><span class="line">    months,</span><br><span class="line">    month: &quot;&quot;,</span><br><span class="line">    days,</span><br><span class="line">    day: &quot;&quot;,</span><br><span class="line">    hours,</span><br><span class="line">    hour: &quot;&quot;,</span><br><span class="line">    mins,</span><br><span class="line">    min: &quot;&quot;,</span><br><span class="line">    defaultDate: []</span><br><span class="line">  &#125;,</span><br><span class="line">   // 选择大于当前年份的时候 需要重置 月日时分</span><br><span class="line">  reMonDayHourMin(val) &#123;</span><br><span class="line">    // 获取最新日期，防止出现页面长时间停留，造成时间不准</span><br><span class="line">    const date = new Date();</span><br><span class="line">    // 选择了明年以后</span><br><span class="line">    if (this.data.years[val[0]] &gt; date.getFullYear()) &#123;</span><br><span class="line">      let months = [];</span><br><span class="line">      for (let i = 1; i &lt;= 12; i++) &#123;</span><br><span class="line">        months.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        months</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      let months = [];</span><br><span class="line">      for (let i = date.getMonth() + 1; i &lt;= 12; i++) &#123;</span><br><span class="line">        months.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        months</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 选择本年度 不同月份后  需要重置 日时分</span><br><span class="line">  reDayHourMin(val) &#123;</span><br><span class="line">    // 获取最新日期，防止出现页面长时间停留，造成时间不准</span><br><span class="line">    const date = new Date();</span><br><span class="line">    // 这边选择的月份 可能是 01 02，所以需要将其转成 1 2</span><br><span class="line">    let formatSelMonth = parseInt(this.data.months[val[1]]);</span><br><span class="line">    let countDays = new Date(this.data.years[val[0]], formatSelMonth, 0).getDate();</span><br><span class="line">    let days = [];</span><br><span class="line">    // 当前日期</span><br><span class="line">    let CURDATE = `$&#123;date.getFullYear()&#125;$&#123;formatNum(date.getMonth() + 1)&#125;`;</span><br><span class="line">    // 选中的日期</span><br><span class="line">    let SELDATE = `$&#123;this.data.years[val[0]]&#125;$&#123;this.data.months[val[1]]&#125;`;</span><br><span class="line">    if (CURDATE == SELDATE) &#123;</span><br><span class="line">      for (let i = date.getDate(); i &lt;= countDays; i++) &#123;</span><br><span class="line">        days.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        days</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      for (let i = 1; i &lt;= countDays; i++) &#123;</span><br><span class="line">        days.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        days</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 选择本年度 本月份 不同日期的时候 需要重置 时分</span><br><span class="line">  reHourMin(val) &#123;</span><br><span class="line">    // 获取最新日期，防止出现页面长时间停留，造成时间不准</span><br><span class="line">    const date = new Date();</span><br><span class="line">    // 当前日期</span><br><span class="line">    let CURDATE = `$&#123;date.getFullYear()&#125;$&#123;formatNum(date.getMonth() + 1)&#125;$&#123;formatNum(date.getDate())&#125;`;</span><br><span class="line">    // 选择日期</span><br><span class="line">    let SELDATE = `$&#123;this.data.years[val[0]]&#125;$&#123;this.data.months[val[1]]&#125;$&#123;this.data.days[val[2]]&#125;`;</span><br><span class="line">    let hours = [];</span><br><span class="line">    if (CURDATE == SELDATE) &#123;</span><br><span class="line">      // 重置小时</span><br><span class="line">      for (let i = date.getHours(); i &lt;= 23; i++) &#123;</span><br><span class="line">        hours.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        hours</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      for (let i = 0; i &lt;= 23; i++) &#123;</span><br><span class="line">        hours.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        hours</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 选择本年度 本月份 同一日期的时候 需要重置 分钟</span><br><span class="line">  reMin(val) &#123;</span><br><span class="line">    // 获取最新日期，防止出现页面长时间停留，造成时间不准</span><br><span class="line">    const date = new Date();</span><br><span class="line">    // 当前日期时间</span><br><span class="line">    let CURDATETIME = `$&#123;date.getFullYear()&#125;$&#123;formatNum(date.getMonth() + 1)&#125;$&#123;formatNum(date.getDate())&#125;$&#123;formatNum(date.getHours())&#125;`;</span><br><span class="line">    // 选择日期时间</span><br><span class="line">    let SELDATETIME = `$&#123;this.data.years[val[0]]&#125;$&#123;this.data.months[val[1]]&#125;$&#123;this.data.days[val[2]]&#125;$&#123;this.data.hours[val[3]]&#125;`;</span><br><span class="line">    let mins = [];</span><br><span class="line">    if (CURDATETIME == SELDATETIME) &#123;</span><br><span class="line">      // 重置分钟</span><br><span class="line">      for (let i = date.getMinutes(); i &lt;= 59; i++) &#123;</span><br><span class="line">        mins.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        mins</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      for (let i = 0; i &lt;= 59; i++) &#123;</span><br><span class="line">        mins.push(formatNum(i))</span><br><span class="line">      &#125;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        mins</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">   bindChange(e) &#123;</span><br><span class="line">    // pick view 改变值后的回调</span><br><span class="line">    const val = e.detail.value;</span><br><span class="line">    // 根据选择，重置对应的时间</span><br><span class="line">    this.reMonDayHourMin(val);</span><br><span class="line">    this.reDayHourMin(val);</span><br><span class="line">    this.reHourMin(val);</span><br><span class="line">    this.reMin(val);</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      year: this.data.years[val[0]],</span><br><span class="line">      month: this.data.months[val[1]],</span><br><span class="line">      day: this.data.days[val[2]],</span><br><span class="line">      hour: this.data.hours[val[3]],</span><br><span class="line">      min: this.data.mins[val[4]],</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">   onLoad: function(options) &#123;</span><br><span class="line">    console.log(&quot;options&quot;,options);</span><br><span class="line">    let date = new Date();</span><br><span class="line"></span><br><span class="line">    let &#123;</span><br><span class="line">        modalCardTime = &quot;&quot;,</span><br><span class="line">        modalCardDate = &quot;&quot;,</span><br><span class="line">        modalCardName = &quot;&quot;,</span><br><span class="line">        modalCardTel = &quot;&quot;,</span><br><span class="line">        modalCardAvatar = &quot;&quot;,</span><br><span class="line">        modalCardIdolid=&quot;&quot;</span><br><span class="line">    &#125; = options;</span><br><span class="line"></span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      modalCardTime,</span><br><span class="line">      modalCardDate,</span><br><span class="line">      modalCardName,</span><br><span class="line">      modalCardTel,</span><br><span class="line">      modalCardAvatar,</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">    if (clockId &gt; 0) &#123;</span><br><span class="line">      // 用户修改闹钟</span><br><span class="line">      let resetYear;</span><br><span class="line">      let resetMonth;</span><br><span class="line">      let resetDate;</span><br><span class="line">      let resetHour = modalCardTime.split(&quot;:&quot;)[0];</span><br><span class="line">      let resetMin = modalCardTime.split(&quot;:&quot;)[1];</span><br><span class="line"></span><br><span class="line">      if (modalCardDate == &quot;今天&quot;) &#123;</span><br><span class="line">        resetYear = date.getFullYear();</span><br><span class="line">        resetMonth = date.getMonth() + 1;</span><br><span class="line">        resetDate = date.getDate();</span><br><span class="line">      &#125; else if (modalCardDate == &quot;明天&quot;) &#123;</span><br><span class="line">        resetYear = date.getFullYear();</span><br><span class="line">        resetMonth = date.getMonth() + 1;</span><br><span class="line">        resetDate = date.getDate() + 1;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        resetYear = parseInt(modalCardDate.split(&apos;-&apos;)[0]);</span><br><span class="line">        resetMonth = parseInt(modalCardDate.split(&apos;-&apos;)[1]);</span><br><span class="line">        resetDate = parseInt(modalCardDate.split(&apos;-&apos;)[2]);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      initAllYear(resetYear, resetMonth);</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        years,</span><br><span class="line">        months,</span><br><span class="line">        days,</span><br><span class="line">        hours,</span><br><span class="line">        mins</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">      let yearIndex = this.data.years.indexVf(resetYear);</span><br><span class="line">      let monthIndex = this.data.months.indexVf(resetMonth);</span><br><span class="line">      let dayIndex = this.data.days.indexVf(resetDate);</span><br><span class="line">      let hourIndex = this.data.hours.indexVf(resetHour);</span><br><span class="line">      let minIndex = this.data.mins.indexVf(resetMin);</span><br><span class="line"></span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        defaultDate: [yearIndex, monthIndex, dayIndex, hourIndex, minIndex],</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      initYear();</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        years,</span><br><span class="line">        months,</span><br><span class="line">        days,</span><br><span class="line">        hours,</span><br><span class="line">        mins</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="关于pick-view组件"><a href="#关于pick-view组件" class="headerlink" title="关于pick-view组件"></a>关于pick-view组件</h2><p>⚠️⚠️ 这些代码片段是我直接在项目中复制过来的，因此无法直接在小程序跑。这边只是提供了一个简单的思路，给有需要的人或者未来的自己（记忆不好）😂😂😂。</p>
+<blockquote>
+<blockquote>
+<p>value<br>NumberArray<br>数组中的数字依次表示 picker-view 内的 picker-view-column 选择的第几项（下标从 0 开始），数字大于 picker-view-column 可选项长度时，选择最后一项。</p>
+</blockquote>
+</blockquote>
+<ol>
+<li><code>pick-view</code>提供了<code>NumberArray</code>类型的<code>value</code>属性，所以他只能是数字组成的数组，<code>[1,2,3,4,5]</code>而不能是<code>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;]</code>。 因此需要做<code>Number</code>化。 通过<code>value</code>属性，我们可以设置默认展示的<code>picker-view-column</code>值。</li>
+<li>因为需求中需要做不足10补零的操作，因此需要转换一下。比如<code>3</code>需要转化成<code>03</code>。但是在通过<code>bindChange</code>后选择出来的就是<code>03</code>了，因此⚠️需要做<code>parseInt</code>操作。可以直接将<code>03</code>转成<code>3</code>;</li>
+<li>需求需要不能选择小于当前时间，即不能出现小于当前时间的选项，因此需要通过几个方法<code>reMonDayHourMin</code>,<code>reDayHourMin</code>,<code>reHourMin</code>,<code>reMin</code>来比对选择的时间和当前的时间，防止出现选择其他时间后，选项不出来的bug。</li>
+<li>最后，在进入页面的时候需要重新获取最新的时间，<code>let date = new date()</code>;防止用户长时间停留页面，造成时间不准的情况</li>
+</ol>
+<p>Thanks,新的一年。加油！❤️</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>扫码可以请我吃一包辣条</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/img/wechatpay.jpg" alt="jed_shi 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/img/alipay.jpg" alt="jed_shi 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    jed_shi
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sunnydesmond.github.io/基于pick-view时间组件.html" title="基于pick-view时间组件">https://sunnydesmond.github.io/基于pick-view时间组件.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/微信小程序/" rel="tag"># 微信小程序</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/即将再见的2018.html" rel="next" title="即将再见的2018">
+                <i class="fa fa-chevron-left"></i> 即将再见的2018
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/微信小程序设置全局弹窗.html" rel="prev" title="微信小程序设置全局弹窗">
+                微信小程序设置全局弹窗 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jed_shi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#做一个时间选择器"><span class="nav-number">1.</span> <span class="nav-text">做一个时间选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pick-view"><span class="nav-number">2.</span> <span class="nav-text">pick view</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不上台面的代码片段"><span class="nav-number">3.</span> <span class="nav-text">不上台面的代码片段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#view-代码"><span class="nav-number">4.</span> <span class="nav-text">view 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公共js代码"><span class="nav-number">5.</span> <span class="nav-text">公共js代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面js"><span class="nav-number">6.</span> <span class="nav-text">页面js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于pick-view组件"><span class="nav-number">7.</span> <span class="nav-text">关于pick-view组件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jed_shi</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
